@@ -1,0 +1,223 @@
+\chapter{Appendix} \label{ch:appendix}
+
+\section{Open-Source Code} \label{sec:appendix:opensource}
+Open-source availability
+\section{High-Throughput System Analysys}  \label{sec:appendix:highthroughput}
+\subsection{Derivation of SNR Expression}
+\label{sec:snr_derivation}
+
+In this section we derive the expression for the SNR of a recovered image. Considering the additive noise acquisition model, $\y = \A\x + \noise$, 
+the recovered image $\widehat \x$ is given by:
+\[\widehat \x =  \A^\dagger  \y = \x +  \A^\dagger  \noise\:.\]
+In what follows, we assume only that $\noise$ is zero mean with covariance $\sigma_\noise^2 \I$,
+
+Defining the mean of the recovered object $\mu = \mathbb{E}[\widehat \x]$, as well as the covariance $\mat\Sigma = \mathbb{E}[(\widehat \x-\x) (\widehat \x-\x)^\top]$, we calculate the imaging SNR using the root mean squared error (RMSE):
+\[SNR = \frac{\frac{1}{m}\sum_{i=1}^m\mu_i}{\sqrt{\frac{1}{m}\mathrm{Tr}(\mat\Sigma)}}\:.\]
+Assuming zero-mean noise, the numerator is simply the average object signal $\bar s$.
+Expanding the covariance term in the denominator,
+\begin{align*}
+    \Sigma &= \mathbb{E}[ \A^\dagger  \noise( \A^\dagger  \noise)^\top]
+    %\\
+    %&= \mathbb{E}[ A^\dagger  \eta\eta ^\top ( A^\dagger)^\top] 
+    = \sigma_{ \noise}^2  \A^\dagger ( \A^\dagger)^\top\:,
+\end{align*}
+where we apply the assumption that the covariance of $\noise$ is $\sigma_\noise^2 \I$. Then,
+\[\mathrm{Tr}( \A^\dagger ( \A^\dagger)^\top ) = \sum_{i=1}^m \frac{1}{\sigma_i( \A)^2} = \frac{1}{\sigma_1(\A)^2} \sum_{i=1}^m \frac{\sigma_1(\A)^2}{\sigma_i(\A)^2} \:.\]
+Thus we have that
+\[SNR = \frac{\bar s}{\frac{1}{\sigma_1(\A)} \sqrt{\frac{1}{m}\sum_{i=1}^m \frac{\sigma_1(\A)}{\sigma_i(\A)}} \cdot\sigma_\eta} := \frac{\sigma_1(\A) \bar s }{ f\sigma_\eta }\:,\]
+where $f$ is the general definition of the deconvolution noise factor. This expression is consistent with the definition in~\eqref{eq:DNF} for convolutional operators, where we note that the singular values are given by the power spectrum of the kernel $\h$. Further, we note that in this case $\sigma_1(\A)=\gamma$ since that is the DC component of a non-negative signal.
+
+\subsection{Multi-frame Decomposition}\label{sec:multiframe_app}
+
+We consider the case of a multiframe operator with the same blur kernel $\h$ used in every frame. In this case, the forward operator has the form
+\begin{equation*}
+\A =  \begin{bmatrix}\W_1 \\ \vdots \\ \W_n \end{bmatrix}\B := \W\B\:.
+\end{equation*}
+ Following the derivation of SNR from the previous section, we compute $\mathrm{Tr}(\A^\dagger (\A^\dagger)^\top)$. First,
+\[\A^\dagger = (\B^\top {\W}^\top{\W} \B)^{-1} \B^\top {\W}^\top =
+\B^{-1} ({\W}^\top{\W} )^{-1} {\W}^\top\:,\]
+assuming that $\B$ and $\W^\top \W$ are invertible.
+Then we have that
+\begin{align*}
+    \mathrm{Tr}(\A^\dagger &(\A^\dagger)^\top) = \mathrm{Tr}(\B^{-1} ({\W}^\top{\W} )^{-1} {\W}^\top {\W} ({\W}^\top{\W} )^{-\top}
+    \B^{-\top}) \\
+    &= \mathrm{Tr}(\B^{-1} ({\W}^\top{\W} )^{-1}
+    \B^{-1}) = \mathrm{Tr}(({\W}^\top{\W} )^{-1} \B^{-2} )\:.
+\end{align*}
+We now consider the form of ${\W}^\top{\W} = \sum_{j=1}^n \W_j^\top \W_j$. Each $\W_j^\top \W_j$ is a square diagonal matrix with either a $0$ or $1$ for each diagonal entry, depending on whether the corresponding pixel is included in the window. Thus the sum ${\W}^\top {\W}$ is a diagonal matrix with the $i$th diagonal value given by the number of times pixel $i$ is included in the windows $\{\W_1,...,\W_n\}$, a quantity we denote as $c_i = \sum_{j=1}^n \W_j \e_i$ where $\{\e_i\}$ are the standard basis vectors.
+% \begin{align*}
+%     \mathrm{Tr}(A^\dagger &(A^\dagger)^\top) = \mathrm{Tr}(B^{-2} \mathrm{diag}(c_1^{-1},...,c_m^{-1}))\:.
+% \end{align*}
+
+Before we proceed further, note that for any matrices $\M$ and $\D$ with non-negative entries and $\D$ diagonal,
+\[\mathrm{Tr}(\D\M) = \sum_{i} D_{ii} M_{ii}  \leq \max_{i} D_{ii} \cdot \mathrm{Tr}(\M)\:.\]
+% Then we have that
+% \begin{align*}
+% \kappa(A) &= \kappa({W} B) \\&\leq \kappa({W}) \cdot \kappa(B) = \frac{\max_{j}c_j}{\min_{j}c_j} \cdot \frac{\max_i |\tilde h|_i}{\min_i |\tilde h|_i}\:.
+% \end{align*}
+% Since the condition number is an upper bound on the DNF, this provides a lower bound on SNR for this multiframe case.
+We can therefore conclude that
+\begin{align*}
+    \mathrm{Tr}(\A^\dagger (\A^\dagger)^\top)&\leq \max_{i}\frac{1}{c_i}\cdot \mathrm{Tr}(\B^{-2})
+    =
+    \frac{1}{\min_{i} c_i}   \cdot \sum_{i=1}^m \frac{1}{|\tilde \h|_i^2}\:.
+\end{align*}
+Thus we see that the expression for the covariance is decreased by a factor of at least the square root of minimum coverage. This corresponds to the lower bound on the SNR:
+\[SNR \geq \sqrt{{\min_{i} c_i}}\cdot \frac{ \gamma\bar s}{ f \sigma_\eta  }\:.\]
+Where $f$ is defined as in~\eqref{eq:DNF}.
+
+
+
+\subsection{Blur Kernel Optimization} \label{sec:optimization_app}
+
+In this section we discuss the reformulation of
+the optimization problem in~\eqref{eq:illum_opt_single} as a smooth objective with convex constraints.
+Recall that the optimization problem has the form
+\begin{align*}
+\min_{\h}&~~ \sqrt{\frac{1}{m} \sum_{i=0}^m \frac{\max_i{|\tilde{\h}|_i^2}}{|\tilde{\h}|_i^2}} \\
+  s.t. &~~0 \leq h_i \leq 1 \; \forall \; i, \quad
+  \sum_{i} h_i = \gamma \:.
+\end{align*}
+First, note that by definition $\tilde \h=\F\h$ where $\F$ represents the discrete Fourier transform (DFT) matrix.
+Then, we know that $\max_i{|\tilde{\h}|_i^2}$ is the DC component of the signal, which is equal to $\gamma$ and therefore fixed for any feasible $\h$.
+Therefore, the blur kernel which maximizes~\eqref{eq:illum_opt_single} is the same as the one that maximizes
+\begin{align*}
+\label{eq:opt_smooth}
+\min_{\h}&~~ \sum_{i=0}^m \frac{1}{(\F_i^\top\h)^2} ~~
+  s.t. ~~0 \leq h_i \leq 1, ~
+  \sum_{i} h_i = \gamma \:,
+\end{align*}
+where $\F_i$ represents columns of the DFT matrix.
+
+It is possible to use projected gradient methods because the objective function is smooth nearly everywhere and the constraints are convex. At each iteration, there is a gradient step followed by a projection step.
+The gradient step is defined as
+\begin{align*}
+    \tilde \h^{k+1} = \h^k + \alpha^k \sum_{i=0}^m   \frac{2}{(\F_i^\top \h^k)^{3}} \cdot \F_i\:,
+\end{align*}
+for potentially changing step size $\alpha^k$.
+%\nabla \sum_{i=0}^m \frac{1}{(F_i^\top h)^2} = \sum_{i=0}^m   -2(F_i^\top h)^{-3} \cdot \nabla (F_i^\top h)= 
+The projection step is defined as
+\begin{align*}
+    \h^{k+1} = \Pi_{\mathcal{S}}(\tilde \h_{k+1})\:,
+\end{align*}
+where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficent methods for this projection exist~\cite{,gupta2010l1}.
+
+\subsection{Fundamental DNF Limits}\label{sec:dnf_limit}
+
+There are fundamental limits on how SNR can be improved by coded illumination.
+We examine a fundamental lower bound on the DNF to demonstrate this.
+
+Recall that
+\[f^2 = \max_i |\tilde \h|_i^2\cdot \frac{1}{m} \sum_{i=1}^m \frac{1}{|\tilde \h|_i^2}\:.\]
+Then, note that $\frac{1}{m} \sum_{i=1}^m \frac{1}{|\tilde \h|_i^2}$ is the reciprocal of the {harmonic mean} of $\{|\tilde \h|_1^2,...,|\tilde \h|_m^2\}$. Since the harmonic mean is always less than the {arithmetic mean}, we have that
+$$ \frac{1}{m} \sum_{i=1}^m \frac{1}{|\tilde \h|_i^2}\geq \frac{1}{\frac{1}{m}\sum_{i=1}^m |\tilde \h|_i^2}\:. $$
+
+Next, we apply Parseval's and have $\frac{1}{m}\sum_{i=1}^m |\tilde \h|_i^2 = \sum_{i=1}^m h_i^2$.
+Additionally, $\max_i |\tilde \h|_i$ is the DC component of the signal, which is specified by the constraint $\sum_{i=1}^m h_i = \gamma$.
+As a result, $$ f^2 \geq \frac{\gamma^2}{\sum_{i=1}^m h_i^2}\:.$$
+Finally, we see that
+$$\max_{\h\in[0,1]^m} \sum_{i=1}^m h_i^2~:~ \sum_{i=1}^m h_i=\gamma$$
+is achieved for binary $h$ and has the maximum value $\gamma$. Therefore, 
+\[f^2 \geq \frac{\gamma^2}{\sum_{i=1}^m h_i^2} \geq \frac{\gamma^2}{\gamma} = \gamma\:.\]
+% \begin{lem}
+% We have the following relationship between average squared singular value and illumination values, $\frac{1}{m}\sum_{i=1}^m |\tilde h|_i^2 = \sum_{j=1}^d v_j^2$.
+% \end{lem}
+% \begin{proof}
+% First, note that $\tilde h = Fh = F\sum_{j=1}^d v_j \delta_j$. Then the average squared singular values is given by the inner product
+% $$\frac{1}{m} \sum_{i=1}^m |\tilde h|_i^2 = \frac{1}{m} (Fh)^H Fh =  \frac{1}{m} \sum_{j=1}^n \sum_{\ell=1}^n v_jv_\ell \delta_j^H F^H F\delta_\ell =  \sum_{j=1}^n  v_j^2 $$
+% where the final simplification comes from noting that $F^H F = mI$ (since we use un-normalized DFT matrices, TODO) and $\delta_j^H\delta_\ell = \mathbf{1}\{j=\ell\}$.
+% \end{proof}
+That is, the DNF grows at a rate of at least $\sqrt{\gamma}$. As a result,  the best achievable SNR (using~\eqref{eq:snr_coded}) is
+$$ SNR  \leq \frac{\sqrt{\gamma}\bar{s}_0}{\sqrt{\gamma\bar{s}_0 + \sigma^2_{r}}}
+=\sqrt{\bar{s}_0}\sqrt{\frac{\gamma \bar{s}_0 }{\gamma\bar{s}_0 + \sigma^2_{r}}}\:,
+$$
+This upper bound on SNR increases with ${\gamma}$.
+In Methods Section~\ref{sec:illum_opt}, we discuss an exact closed form for $f(\gamma)$ that yields an expression for optimal multiplexing.
+
+However, if $\sigma_r$ is much smaller than the total captured signal, i.e. $\sigma_r \ll \gamma \bar{s}_0 $, the SNR will not increase with $\gamma$, and in fact its maximum value,
+$$SNR \leq \sqrt{\bar{s}_0}$$
+is achieved by strobed illumination (i.e. $\gamma=1$). In other words, when signal is large compared with readout noise, strobed will be optimal, regardless of the illumination optimization method.
+
+
+\subsection{Derivation of Illumination Throughput}\label{sec:app_throughput}
+
+\subsubsection{Stop-and-Stare}
+In the stop-and-stare acquisition strategy, the sample is illuminated for the full dwell time ($t_{sns}$), which is set by motion stage parameters such as maximum velocity, acceleration, and the necessary stage settle time ($v_{stage}$, $a_{stage}$, and $t_{settle}$ respectively), as well as camera readout ($t_{readout}$). These parameters are related to frame rate $r_{frame}$ by the following relationship:
+\begin{equation*}
+t_{sns} = \frac{1}{r_{frame}} - \max (t_{readout}, 2t_{accel} + t_{move})
+\end{equation*}
+
+Note that this equation assumes perfect hardware synchronization and instantaneous acceleration ($\frac{\partial a}{\partial t} = \infty$). The variables $t_{accel}$ and $t_{move}$ are defined as:
+
+\begin{equation*}
+t_{accel} = \frac{v_{stage}}{a_{stage}}
+\end{equation*}
+
+\begin{equation*}
+t_{move} = \frac{d_{frame} - 0.5 * a_{stage} * t_{accel}^2}{v_{stage}}
+\end{equation*}
+
+Here the expression $d_{frame} = FOV * (1-O)$ is the distance between frames, which is determined by the field-of-view of a single frame ($FOV$) and inter-frame overlap fraction $O$.
+
+Combining terms, we arrive at an expression for $t_{sns}$:
+\begin{equation*}
+t_{sns} = \frac{1}{r_{frame}} - \max (t_{readout}, 2\frac{v_{stage}}{a_{stage}} - \frac{d_{frame} - 0.5 * a_{stage} * t_{accel}^2}{v_{stage}})
+\end{equation*}
+
+When camera readout time $t_{readout}$ is short, $t_{sns}$ can be simplified to:
+
+\begin{equation*}
+t_{sns} = \frac{1}{r_{frame}} - 2\frac{v_{stage}}{a_{stage}} - \frac{d_{frame} - 0.5 * \frac{v_{stage}^2}{a_{stage}}}{v_{stage}}
+\end{equation*}
+
+\subsubsection{Strobed Illumination}
+
+The maximum pulse duration for strobed illumination is related to the time required to move a distance of one effective pixel size $\frac{\Delta}{M}$ at a velocity $v_{stage}$:
+\begin{equation*}
+t_{strobe} = \frac{\frac{\Delta}{M}}{v_{stage}}
+\end{equation*}
+
+The stage velocity $v_{stage}$ may be bounded by the motion stage hardware ($v_{max}$) or by the field of view of the microscope ($FOV$):
+
+\begin{equation*}
+v_{stage} = \min (v_{max}, r_{frame}FOV)
+\end{equation*}
+
+\subsubsection{Coded Illumination}
+The calculation of $t_{coded}$ for coded illumination is synonymous to the strobed illumination case, weighted by the multiplexing coefficient used to generate the illumination sequence ($\gamma$), and using the $v_{stage}$ calculation from the strobed subsection:
+\begin{equation*}
+t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
+\end{equation*}
+
+\subsection{System Parameters}\label{sec:sys_param}
+    \begin{center}
+    \begin{tabular}{ | c | c |}
+    \hline
+    \textbf{Parameter} & \textbf{Value} \\ 
+    \hline
+    Maximum Motion Stage Velocity & $40\frac{m}{s}$ \\ 
+    \hline
+    Motion Stage Acceleration & $400 \frac{m}{s^2}$\\
+    \hline
+    Motion Stage Settle Time & $0.1s$\\
+    \hline
+    Objective Mag / NA& $10\times / 0.25NA$\\
+    \hline
+    Frame Overlap & $20\%$ \\
+    \hline
+    Illumination Power & $600$ \\
+    \hline
+    Camera Readout Time & 26ms\\
+    \hline
+    Camera Readout Noise & 3.7 $e^-$ \\
+    \hline
+    Camera Quantum Efficiency & $60\%$ \\
+    \hline
+    Camera Pixel Size & $6.5\mu m$\\
+    \hline
+    Fluorophore Quantum Yield& $79\%$ lux\\
+    \hline
+    Illumination repetition Rate & $250 kHz$\\
+     \hline
+    \end{tabular}
+\end{center}
