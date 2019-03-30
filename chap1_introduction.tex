@@ -103,35 +103,57 @@ All measurements contain noise from various sources, including photon quantizati
     \vec{y} = \op{A}\{\vec{x}\} + \vec{\eta}
 \end{equation}
 
-This approximation is generally valid for measurements made with more than 10 photon counts, which includes every case presented in this work (including fluorescence imaging). The effect of this noise on image quality is generally represented as the signal-to-noise ratio (SNR):
+This approximation is generally valid for measurements made with more than 10 photon counts, which includes every case presented in this work (including fluorescence imaging). The effect of this noise on image quality is generally represented as the signal-to-noise ratio (SNR). In this work, we use the common imaging SNR definition:
 
 \begin{equation}
     \label{eq:intro_snr}
     SNR = \frac{\bar{\vec{y}}}{\sigma_{\vec{\eta}}}
 \end{equation}
 
-When inverting the forward operator $\op{A}\{\}$ to recover $\vec{x}$, the presence of $\vec{\eta}$ will lead to error in the measurements. Take, for example, if $\op{A}$ can be represented as a matrix $\mat{A}$, the Moore-Penrose pseudoinverse of the object is given by:
+\noindent where $\sigma_{\vec{\eta}}$ is the standard deviation of the noise term. When inverting the forward operator $\op{A}\{\}$ to recover $\vec{x}$, the presence of $\vec{\eta}$ will lead to error in the measurements compared to the ground truth. Take, for example, if $\op{A}$ can be represented as a matrix $\mat{A}$, the Moore-Penrose pseudoinverse of the object is given by:
 
 \begin{equation}\label{eq:intro_noise_inverse}
         \hat{\vec{\vec{x}}} = (\mat{A}^H \mat{A})^{-1} \mat{A}^H y = (\mat{A}^H \mat{A})^{-1} \mat{A}^H \mat{A} \vec{x} + (\mat{A}^H \mat{A})^{-1} \mat{A}^H \vec{\eta} = \vec{x} + (\mat{A}^H \mat{A})^{-1} \mat{A}^H \vec{\eta}
 \end{equation}
 
-Based on Eq.~\ref{eq:intro_noise_inverse}, the error between $\hat{\vec{x}}$ and the true $\vec{x}$ is $(\mat{A}^H \mat{A})^{-1} \mat{A}^H \vec{\eta}$. Taking the covariance of this term, we can find an expression for the covariance of the error term in the reconstruction:
+Based on Eq.~\ref{eq:intro_noise_inverse}, the root-mean-squared error (RMSE) between $\hat{\vec{x}}$ and the true $\vec{x}$ is $(\mat{A}^H \mat{A})^{-1} \mat{A}^H \vec{\eta}$. Taking the covariance of this term, we can find an expression for the covariance of the error term in the reconstruction:
 
 \begin{equation}\label{eq:intro_noise_covariance}
     \mat{\Sigma}_{\mat{A}^{\dagger}\vec{\eta}} = (\mat{A}^H \mat{A})^{-1} \mat{A}^H \sigma_{\vec{\eta}}^2 \mat{A} (\mat{A}^H \mat{A}) ^{-H} = \sigma_{\vec{\eta}}^2 (\mat{A}^H \mat{A})^{−1} \mat{A}^H  \mat{A} (\mat{A}^H \mat{A}) ^{-H} = \sigma_{\vec{\eta}}^2 (\mat{A}^H \mat{A}) ^{-H} 
 \end{equation}
 
-The main result of Eq.~\ref{eq:intro_noise_covariance} is that the inversion process re-weighs, or "colors" the original Gaussian white noise $\vec{\eta}$. When $\mat{A}$ has an $\ell_2$ operator norm of 1, the minimum singular value of $\mat{A}$ defines the maximum noise amplification, while the sum of the inverse singular values defines the total RMSE:
+The main result of Eq.~\ref{eq:intro_noise_covariance} is that the inversion process re-weighs the spectrum of the original Gaussian white noise $\vec{\eta}$. When $\mat{A}$ has an $\ell_2$ operator norm of 1, the minimum singular value of $\mat{A}$ defines the maximum noise amplification, while the sum of the inverse singular values defines the total RMSE:
 
 \begin{equation}\label{eq:intro_noise_amplification}
     \sigma_{\mat{A}^{\dagger}\vec{\eta}} = \sigma_{\vec{\eta}} \sqrt{\mat{\Sigma}_{i=0}^N{\frac{1}{\sigma_i^2\{\mat{A}\}}}} = \sigma_{\vec{\eta}} \sqrt{Tr\{(\mat{A}^H \mat{A})^{-1}\} / N}
 \end{equation}
 
-\noindent where $N$ is the length of $\vec{x}$ and $\sigma_i^2 \{\mat{A}\}$ represents the $i^{th}$ singular value of $\mat{A}$. This definition is consistent with~\cite{agrawal2009optimal}.
+\noindent where $N$ is the length of $\vec{x}$ and $\sigma_i^2 \{\mat{A}\}$ represents the $i^{th}$ singular value of $\mat{A}$. This definition is consistent with~\cite{agrawal2009optimal}. This relationship between the singular values of $A$ and the amplification of $\vec{\eta}$ enables a closed-form relationship to the reconstruction signal-to-noise ratio ($SNR_{recon}$) of a measurement $\vec{y}$, defined as:
+
+\begin{equation}\label{eq:intro_snr_recon}
+SNR_{recon} = \frac{\bar{\vec{y}}}{\sigma_{\mat{A}^{\dagger}\vec{\eta}}} = \frac{\bar{\vec{y}}}{\sigma_{\vec{\eta}} \sqrt{\mat{\Sigma}_{i=0}^N{\frac{1}{\sigma_i^2\{\mat{A}\}}}}} 
+\end{equation}
+
+Where $\bar{\vec{y}}$ is the mean signal of the measurement as in Eq.~\ref{eq:intro_snr_recon}. From this relationship, it becomes clear that the deconvolution process will reduce the $SNR$ by a factor:
+
+\begin{equation}\label{eq:intro_dnf}
+    f = \sqrt{\mat{\Sigma}_{i=0}^N{\frac{1}{\sigma_i^2\{\mat{A}\}}}}
+\end{equation}
+
+Where $f$ is the deconvolution noise factor (DNF). This result is particularly useful for convolutional forward operators, where the singular values of $A$ can be computed quickly and efficiently from the Fourier coefficients of the convolution kernel $h$ due to the circulant structure of $A$. This analysis of RMSE amplification is equivalent to A-optimal design~\cite{chernoff1953locally}, which is used here due to strict compatability with the definition of imaging snr (Eq.~\ref{eq:intro_snr}).
+
+\begin{figure}[tbh]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_intro_dnf.pdf}
+\caption{\label{fig:intro:dnf} Simulation of a convolutional forward model and verification of DNF calculations. Top row shows forward modal with additive gaussian noise, while the middle row shows the deconvolution of the same measurement, separated into object deconvolution and noise amplification terms. Bottom row shows the measurement and reconstruction SNR across 1000 random generations of the Gaussian white noise term, overlaid with the multiplication of the reconstruction SNR multiplied by the DNF as a verification. The operators $*$ and $*^{-1}$ represent 2D convolution and deconvolution, respectively.}
+\end{figure}
+
+As a demonstration of this relationship, we simulated a convolutional forward model with additive Gaussian noise, and performed deconvolution of the noisy measurement. These results show that the DNF provides a very close scalar relationship between measurement SNR and deconvolved SNR, which is illustrated by comparing the estimated measurement SNR (deconvolved SNR multiplied by the DNF) to the original measurement SNR. Small discrepancies between the expected and predicted SNR calculations are likely due to sampling error, since we evaluate the noise standard deviation across a 20 pixel square in the top left corner of each image, rather than the full image (to avoid including the standard deviation of the object in our SNR calculation). These relationships are used in both Chapter~\ref{ch:phase} and Chapter~\ref{ch:highthroughput} for analyzing the noise propagation of linear forward models.
+
+
 
 \section{Coded Illumination for Optical Microscopy}
-Since the 16$^{th}$ century microscopes have employed some sort of light source to illuminate a specimen, from candles to semiconductor light sources. In this work, we explore, through both theory and demonstration, the use of programmable LED sources for microscopy, replacing conventional sources such as halogen lamps. These sources enable both fast switching of qualitative contrast methods~\cite{Zheng2011, albeanu2008led} as well as the capability to perform quantitative reconstructions of the complete complex field of the sample~\cite{Tian3dDpc, Zheng2013, tian2015quantitative}.
+Since the 17$^{th}$ century, microscopes have employed some sort of light source to illuminate a specimen, from candles to semiconductor light sources. In this work, we explore, through both theory and demonstration, the use of programmable LED sources for microscopy, replacing conventional sources such as halogen lamps. These sources enable both fast switching of qualitative contrast methods~\cite{Zheng2011, albeanu2008led} as well as the capability to perform quantitative reconstructions of the complete complex field of the sample~\cite{Tian3dDpc, Zheng2013, tian2015quantitative}.
 
 Contrast in optical microscopy is conventionally obtained in a variety of ways – for purely absorptive samples, bright field microscopy images the light that is attenuated by the sample by illuminating within the range of angles defined by the numerical aperture ($NA$) of the objective. Conversely, dark field microscopy uses illumination from angles outside of the illumination $NA$, imaging only light that is scattered or “bent” by a refractive medium such as water. Rather than relying on expensive illumination hardware to block transmitted light at the pupil plane, the simple addition of an LED array enables both of these modalities by dynamically changing the pattern via software~\cite{Zheng2011, zijiMulti}.
 

@@ -6,7 +6,7 @@
 
 \documentclass{ucbthesis}
 \usepackage{biblatex, mathrsfs, graphicx, bm}
-\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx}
+\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig, mathtools}
 
 \bibliography{references}
 
@@ -19,6 +19,15 @@
 
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
 
 \renewcommand{\vec}{\bm}
 \newcommand{\op}{\mathcal}
@@ -111,8 +120,7 @@ Finally, I want to thank the many undergraduate students I have been fortunate t
 \end{frontmatter}
 
 \pagestyle{headings}
-
-\include{chap1_introduction}
+\include{chap1_introduction} 
 \include{chap2_phase}
 % \include{chap3_high_throughput}
 % \include{chap4_fabrication}

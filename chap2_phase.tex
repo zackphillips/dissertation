@@ -233,11 +233,27 @@ The cDPC method uses color multiplexing to recover complex-field, making an inhe
 
 \noindent This assumption implies that the optical path length ($\vec{OPL} = \vec{n}\vec{d}$) will remain constant for all measurements. The relative phase delay will always vary with $\lambda$ (Eq. \ref{eq:absorption_phase}), but this is accounted for in the cDPC algorithm by scaling the transfer functions based on the relative wavelength of each color channel. Unless the dispersion curve is known and the material is assumed to be uniform, one cannot account for dispersive effects in the sample using the proposed algorithm. However, in practice these effects do not corrupt our phase reconstructions results significantly due to relatively small dispersive effects of water across optical wavelengths.
 
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig_phase_dpc_opt_transfer.pdf}
+    \caption{\label{fig:phase:cavitated_transfer_functions}
+    DPC transfer functions for amplitude and phase for a range of source cavitation values. As illumination is removed from the center of the source, the overall spectrum becomes more normalized, leading to higher relative values across the mid-range spatial frequencies. However, signal is simultaneously reduced due to lower light throughput. The trade-off between better conditioning and light throughput depends on the illumination power per pixel (or per led).}
+\end{figure}
+
+
 The second assumption is that the sample is colorless, meaning that the absorption does not have chromatic dependence:
 \begin{equation} \label{outEq:monochrome}
 \vec{\mu}(\lambda) \approx \vec{\mu}_0.
 \end{equation}
 \noindent This is generally valid for unstained biological samples, which are transparent. Color variations due to filter transmission coefficients at different wavelengths are present, but can be removed by the calibration procedure described in Section 1.2. Color-dependent absorption, such as that created by stained samples, cannot be recovered and will cause errors in the phase result. In practice, these assumptions limit the applicability of the cDPC method to unstained uncolored samples. However, quantitative phase reveals the mechanical structure of the microenvironment with high contrast, which may eliminate the need for staining in many applications.
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+  \label{fig:phase:dpc_cavitation}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figures/fig_phase_dpc_optimization_cavitation.pdf}
+  \end{center}
+  \caption{Expected SNR of DPC reconstructions as a function of source cavitation. Source patterns with no cavitation generally provide nearly-optimal SNR, although a source with cavitation NA of approximately $NA / 2$ is optimal for high illuminance values.}
+\end{wrapfigure}
 
 \section{SNR Analysis of DPC Phase Recovery Systems}
 Differential Phase Contrast linearizes the partially coherent image formation model, enabling the analysis of this system using the noise analysis methods described in Chapter~\ref{ch:introduction}, Section~\ref{sec:intro_noise}. This section will analyze the choice of source pattern and pupul function in the context of this noise model, and examine the practical benefit of using a variable number of measurements, variable source diameter, and adding a defocus aberration to the pupil, in terms of reconstruction SNR. 
@@ -249,17 +265,40 @@ In the presence of measurement noise (valid for most practical systems) the mult
     \begin{bmatrix}\tilde{\vec{y}}_1 \\ \tilde{\vec{y}}_2 \\ \tilde{\vec{y}}_3\end{bmatrix} = \begin{bmatrix}\tilde{\vec{H}}_{\mu, 1} & \tilde{\vec{H}}_{\phi, 1}\\ \tilde{\vec{H}}_{\mu, 2} & \tilde{\vec{H}}_{\phi, 2} \\ \tilde{\vec{H}}_{\mu, 3} & \tilde{\vec{H}}_{\phi, 3}\end{bmatrix} \times \begin{bmatrix}\tilde{\vec{\mu}} \\ \tilde{\vec{\phi}}\end{bmatrix} + \vec{\eta} + s(\vec{\tilde{\mu}}, \vec{\tilde{\phi}})
 \end{equation}
 
-\noindent Here $\vec{\eta}$ is modeled as white zero-mean gaussian noise with variance $\sigma_{\eta}^2$, which is accurately models most shot-noise limited imaging systems, and $s(\vec{\tilde{\mu}}, \vec{\tilde{\phi}})$ is the nonlinear scatter-scatter term, which is assumed to be small under the weak-object approximation. In the absense of $s(\vec{\tilde{\mu}}, \vec{\tilde{\phi}})$, this system is linear, and can be analyzed using the framework presented in Chapter~\ref{ch:introduction}, Section~\ref{sec:intro_noise}. 
+\noindent Here $\vec{\eta}$ is modeled as white zero-mean Gaussian noise with variance $\sigma_{\eta}^2$, and $s(\vec{\tilde{\mu}}, \vec{\tilde{\phi}})$ is the nonlinear scatter-scatter term, which is assumed to be small under the weak-object approximation. In the absence of $s(\vec{\tilde{\mu}}, \vec{\tilde{\phi}})$, this system is linear, and can be analyzed using the framework presented in Chapter~\ref{ch:introduction}, Section~\ref{sec:intro_noise}. 
+
 
 The goal of the DPC linearization is to facilitate the inversion of the block WOTF matrix; when $\vec{\eta}$ is included in the forward model, this inversion will amplify $\eta$ based on the singular values of the block matrix $\mat{H}$, which are defined by the illumination source $\vec{\tilde{S}}$ and system pupil $\vec{\tilde{P}}$. Here, we explore the design of DPC source patterns $\tilde{S}$ in the presence of additive noise, in terms of reconstruction SNR. The use of a programmable light source such as a LED illuminator enables the easy and efficient programming of $\vec{\tilde{S}}$ simply by changing illumination pattern electronically, making the design space of each source quite large. In this analysis, we explore the use of continuous sources as an approximation of discrete LED sources, as in previous works~\cite{tian2015quantitative, Phillips:17}.
-We first probe the use of a 
 
-\begin{figure}[tbh]
-    \centering
-    \includegraphics[width=\textwidth]{figures/fig_phase_dpc_optimization.pdf}
-    \caption{\label{fig:phase:optimized_dpc} Expected SNR of DPC reconstructions as a function of source cavitation and measurement count. \textbf{(Right)} Source patterns with no cavitation generally provide nearly-optimal SNR, although a source with cavitation NA of approximately $NA / 2$ is optimal for high illuminance values. \textbf{(Left)} SNR increases with the square root of measurement count for more than three DPC measurements, which is the equivalent of averaging measurements under the same noise conditions. For two or less measurements, expected SNR decreases significantly, since there is not enough information to disambiguate phase and amplitude for all frequencies.}
-\end{figure}
+\begin{wrapfigure}{L}{0.3\textwidth}
+  \label{fig:phase:dpc_measurement_count}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figures/fig_phase_dpc_optimization_meas.pdf}
+  \end{center}
+  \caption{Expected SNR of DPC reconstructions as a function of measurement count (equidistant angles). SNR increases with the square root of measurement count for more than three DPC measurements, which is the equivalent of averaging measurements under the same noise conditions. For two or less measurements, expected SNR decreases significantly, since there is not enough information to disambiguate phase and amplitude for all frequencies.}
+\end{wrapfigure}
 
+
+The noise amplification of any linear system can be related to the singular values of the forward model by the deconvolution noise factor (DNF, see Chapter~\ref{ch:introduction}, Section~\ref{sec:intro_noise}). In the DPC forward model described in Eq.~\ref{eq:dpc_forward_model_noise}, these singular values may be found by the following relationship~\cite{silvester2000determinants}:
+
+\begin{equation} \label{eq:phase_wotf_singular_values}
+\vec{\sigma} = \abs{\frac{tr(\mat{A}^H \mat{A})}{2} \pm \sqrt{\frac{tr(\mat{A}^H \mat{A})^2}{4} - det(\mat{A}^H \mat{A})}}
+\end{equation}
+
+Where $\pm$ indicates that both the positive and negative combinations should be included in singular value calculations, $tr(\cdot)$ is the trace (sum of all eigenvalues) and $\det(\cdot)$ is the determinant (product of all eigenvalues). Using Eq.~\ref{eq:intro_dnf} to calculate the deconvolution noise factor (DNF), the noise amplification by the DPC inversion process may be estimated using these singular values. Practically, it is necessary to evaluate the DNF within a range of support in the frequency domain, corresponding to the optical bandwidth of the optical system. In addition, the inherent structure of the phase WOTF ($H_{\phi}$) provides very little support near the DC term, which places a lower bound on the support region of the DNF calculation. In this analysis, we evaluate the DNF at all frequencies between 3\% and 97 \% of the optical bandwidth, which corresponds to the region where the phase WOTF has more than 5\% of it's maximum value for all angles of a half-circle source and circular pupil.
+
+
+With this analysis framework, explore the use of a cavitated DPC source in order to improve the conditioning. The cavitated ("C"-shaped) source was previously proposed~\cite{tian2015quantitative} as an alternative to a filled source ("D"-shaped) due to better conditioning of the deconvolution, particularly for low-frequencies of phase. This poor conditioning leads to low-frequency artifacts that often lead to a "halo"-like effect around the sample. Figure~\ref{fig:phase:cavitated_transfer_functions} illustrates the improvement in the phase transfer function at low frequencies for sources with high cavitation. These sources have a overall spectrum which is more flat, corresponding to lower expected noise amplification by the deconvolution process. However, we also expect the additional illumination power provided by center LEDs will also improve SNR, especially in the presence of signal-independent noise (readout or pattern noise). Therefore, we analyze our system across a two-dimensional space of illumination power (defined by illuminance (Lux) at the sample) and source cavitation (defined by the cavitation NA). The goal of this analysis is to determine the optimal cavitation (cavitation NA), given a particular LED source power. 
+
+
+
+To characterize the relative benefit to using a cavitated source, we simulated measurements performed under various illumination power values (illuminance), which correspond to different measurement SNR values, and evaluated the SNR in the presence of both signal-dependent (shot) noise as well as signal-independent (readout or fixed-pattern) noise sources corresponding to common parameters (The full system parameter list is given in Appendix~\ref{sec:appendix:phase}, Section ~\ref{sec:appendix:dpc_sys_param}). These illuminance values can be compared to measured source illuminance for LEDs used in this work (Appendix~\ref{sec:appendix:phase}, Section ~\ref{sec:appendix:dpc_led_power}). While most DPC sources are discrete, most DPC inversion implementations model the source as continuous to avoid (or average out) LED position calibration error. In this analysis, we adopt the same convention so that our analysis is smooth in terms of cavitation NA.
+
+The results of this analysis are shown in Fig.~\ref{fig:phase:dpc_cavitation}. For per-source LED power of less than 1000 lux, a D-shaped source is optimal due to the additional signal which is provided by the inner LEDs. For brighter sources, an inner NA corresponding to approximately 40-50\% of the objective NA is optimal in terms of SNR, although the SNR improvement is generally less than 5\% compared to a filled-in (non-cavitated) source.
+
+In addition to source cavitation, we can use the same methods to explore other DPC system parameters, including measurement count. The original DPC implementation used 4 measurements~\cite{tian2015quantitative}, but it was later shown that three measurements is sufficient for well-conditioned recovery~\cite{PhillipsChen17cDPC}. To explore this space, we compared using different DPC measurement counts across a range of illumination powers (Fig.~\ref{fig:phase:dpc_measurement_count}). This analysis confirms that reconstructions will fail for less than three measurements, and that using greater than 3 measurements provides improvements which are characteristic of signal averaging ($SNR \propto \sqrt{N}$). This analysis confirms these previous claims, and motivates using three DPC measurements in most circumstances, unless signal averaging is needed to improve SNR.
+
+This section provides two examples of optimizing DPC acquisitions using a noise-based analysis. In general, these data indicate that a D-shaped source is still nearly-optimal in most circumstances, with a C-shaped source providing only marginal SNR improvement when using a powerful source. These data also motivate using 3 DPC measurements instead of 4 (spaced equally in angle). Future work could explore the optimal anglular distribution of DPC sources, as well as the relative benefit of using diverse DPC sources such as monopole, dipole, or other non-semicircular patterns.
 
 \section{Summary}
 Phase imaging enables label-free imaging of samples exhibiting contrast in refractive index, which includes the majority of biological specimens commonly encountered in biology. In this section, we described a method for performing quantitative phase imaging using coded illumination (differential phase contrast), which can be implemented easily on a conventional optical microscope. DPC makes use of the weak-object approximation, which linearizes the image formation process, but is less valid for samples having a strong phase gradient (steep or sharp features). Conventional DPC requires 3 or 4 images to recover the full optical field from intensity measurements; in this chapter, we proposed novel method for performing DPC using only single measurement using a wavelength-multiplexing technique. This method can be implemented on an existing microscope using a simple 3D-printed insert (costing less than 30\$ to fabricate), or with a programmable light source such as a LED array. While our method does not match the SNR of conventional DPC using 4 images, it enables significantly higher acquisition frame rates, enabling quantitative phase imaging of fast-moving samples such as \textit{c. elegens} or cells moving through a microfluidic channel. Our method, which we call cDPC, also enables the synthesis of conventional phase images, like DIC or phase contrast, since quantitative phase is more general than these qualitative phase measurements. Together, these contributions aim to bring quantitative phase imaging to a wider audience through their simple and inexpensive implementations.

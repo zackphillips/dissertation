@@ -2,7 +2,46 @@
 
 \section{Open-Source Code} \label{sec:appendix:opensource}
 Open-source availability
-\section{High-Throughput System Analysys}  \label{sec:appendix:highthroughput}
+
+\section{Quantitative Phase Imaging}\label{sec:appendix:phase}
+
+\subsection{DPC System Parameters}\label{sec:appendix:dpc_sys_param}
+\begin{center}
+    \begin{tabular}{ | c | c |}
+    \hline
+    \textbf{Parameter} & \textbf{Value} \\ 
+    \hline
+    Objective Mag / NA& $10\times / 0.25NA$\\
+    \hline
+    Illumination Power & See table~\ref{sec:appendix:dpc_led_power}\\
+    \hline
+    Camera Readout Noise & 3.7 $e^-$ \\
+    \hline
+    Camera Quantum Efficiency & $60\%$ \\
+    \hline
+    Camera Pixel Size & $6.5\mu m$\\
+    \hline
+    Number of Brightfield LEDs & $72$\\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsection{LED Illuminance Values for DPC Analysis}\label{sec:appendix:dpc_led_power}
+This section describes measured LED power values for a range of common LEDs. Each of these measurements was made at the sample plane using an optical power-meter (Thorlabs PM100D) at a distance of 60$mm$ from the LED.
+\begin{center}
+    \begin{tabular}{ | p{35mm} | c | c | p{70mm} |}
+    \hline
+    \textbf{\centering LED Mfg. \newline Part Number} & \textbf{LED Type} & \textbf{Illuminance} & \textbf{Comment} \\ 
+    \hline
+    \centering VCC\newline VAOL-3LWY4 & Through-hole & 1000.42 Lux & Used in Computational CellScope~\cite{phillips2015multi}\\
+    \hline
+    \centering Knightbright\newline APTF1616SEEZ & SMD & 653.85 Lux & Used for Quasi-Dome~\cite{phillips2017quasi}\\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\section{High-Throughput System Analysis}  \label{sec:appendix:highthroughput}
 \subsection{Derivation of SNR Expression}
 \label{sec:snr_derivation}
 
@@ -205,7 +244,7 @@ t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
     \hline
     Frame Overlap & $20\%$ \\
     \hline
-    Illumination Power & $600$ \\
+    Illumination Power & $600$ Lux\\
     \hline
     Camera Readout Time & 26ms\\
     \hline
