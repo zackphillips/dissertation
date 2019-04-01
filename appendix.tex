@@ -41,9 +41,11 @@ This section describes measured LED power values for a range of common LEDs. Eac
 \end{center}
 
 
-\section{High-Throughput System Analysis}  \label{sec:appendix:highthroughput}
+\section{High-Throughput System Analysis} 
+\label{sec:appendix:hightroughput}
 \subsection{Derivation of SNR Expression}
-\label{sec:snr_derivation}
+
+\label{sec:appendix:snr_derivation}
 
 In this section we derive the expression for the SNR of a recovered image. Considering the additive noise acquisition model, $\y = \A\x + \noise$, 
 the recovered image $\widehat \x$ is given by:
@@ -66,7 +68,7 @@ Thus we have that
 \[SNR = \frac{\bar s}{\frac{1}{\sigma_1(\A)} \sqrt{\frac{1}{m}\sum_{i=1}^m \frac{\sigma_1(\A)}{\sigma_i(\A)}} \cdot\sigma_\eta} := \frac{\sigma_1(\A) \bar s }{ f\sigma_\eta }\:,\]
 where $f$ is the general definition of the deconvolution noise factor. This expression is consistent with the definition in~\eqref{eq:DNF} for convolutional operators, where we note that the singular values are given by the power spectrum of the kernel $\h$. Further, we note that in this case $\sigma_1(\A)=\gamma$ since that is the DC component of a non-negative signal.
 
-\subsection{Multi-frame Decomposition}\label{sec:multiframe_app}
+\subsection{Multi-frame Decomposition}\label{sec:appendix:multiframe_app}
 
 We consider the case of a multiframe operator with the same blur kernel $\h$ used in every frame. In this case, the forward operator has the form
 \begin{equation*}
@@ -107,7 +109,7 @@ Where $f$ is defined as in~\eqref{eq:DNF}.
 
 
 
-\subsection{Blur Kernel Optimization} \label{sec:optimization_app}
+\subsection{Blur Kernel Optimization} \label{sec:appendix:optimization_app}
 
 In this section we discuss the reformulation of
 the optimization problem in~\eqref{eq:illum_opt_single} as a smooth objective with convex constraints.
@@ -141,7 +143,7 @@ The projection step is defined as
 \end{align*}
 where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficent methods for this projection exist~\cite{,gupta2010l1}.
 
-\subsection{Fundamental DNF Limits}\label{sec:dnf_limit}
+\subsection{Fundamental DNF Limits}\label{sec:appendix:dnf_limit}
 
 There are fundamental limits on how SNR can be improved by coded illumination.
 We examine a fundamental lower bound on the DNF to demonstrate this.
@@ -171,14 +173,14 @@ $$ SNR  \leq \frac{\sqrt{\gamma}\bar{s}_0}{\sqrt{\gamma\bar{s}_0 + \sigma^2_{r}}
 =\sqrt{\bar{s}_0}\sqrt{\frac{\gamma \bar{s}_0 }{\gamma\bar{s}_0 + \sigma^2_{r}}}\:,
 $$
 This upper bound on SNR increases with ${\gamma}$.
-In Methods Section~\ref{sec:illum_opt}, we discuss an exact closed form for $f(\gamma)$ that yields an expression for optimal multiplexing.
+In Methods Section~\ref{sec:highthroughput:illum_opt}, we discuss an exact closed form for $f(\gamma)$ that yields an expression for optimal multiplexing.
 
 However, if $\sigma_r$ is much smaller than the total captured signal, i.e. $\sigma_r \ll \gamma \bar{s}_0 $, the SNR will not increase with $\gamma$, and in fact its maximum value,
 $$SNR \leq \sqrt{\bar{s}_0}$$
 is achieved by strobed illumination (i.e. $\gamma=1$). In other words, when signal is large compared with readout noise, strobed will be optimal, regardless of the illumination optimization method.
 
 
-\subsection{Derivation of Illumination Throughput}\label{sec:app_throughput}
+\subsection{Derivation of Illumination Throughput}\label{sec:appendix:app_throughput}
 
 \subsubsection{Stop-and-Stare}
 In the stop-and-stare acquisition strategy, the sample is illuminated for the full dwell time ($t_{sns}$), which is set by motion stage parameters such as maximum velocity, acceleration, and the necessary stage settle time ($v_{stage}$, $a_{stage}$, and $t_{settle}$ respectively), as well as camera readout ($t_{readout}$). These parameters are related to frame rate $r_{frame}$ by the following relationship:
@@ -228,7 +230,8 @@ The calculation of $t_{coded}$ for coded illumination is synonymous to the strob
 t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
 \end{equation*}
 
-\subsection{System Parameters}\label{sec:sys_param}
+\subsection{System Parameters}\label{sec:appendix:sys_param}
+% \scalebox{0.7}{
     \begin{center}
     \begin{tabular}{ | c | c |}
     \hline
@@ -244,7 +247,7 @@ t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
     \hline
     Frame Overlap & $20\%$ \\
     \hline
-    Illumination Power & $600$ Lux\\
+    Illumination Power & $600$ \\
     \hline
     Camera Readout Time & 26ms\\
     \hline
@@ -259,4 +262,5 @@ t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
     Illumination repetition Rate & $250 kHz$\\
      \hline
     \end{tabular}
-\end{center}
+    \end{center}
+% }
