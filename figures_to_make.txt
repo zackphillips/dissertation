@@ -1,3 +1,0 @@
-//- [intro] Computational figure (take from ppt slide) -> forward models and inverse problems
-- [intro] Image of coded illumination microscope
-- [Intro] Amplitude and phase (image)
