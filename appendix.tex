@@ -29,7 +29,7 @@ Open-source availability
 \subsection{LED Illuminance Values for DPC Analysis}\label{sec:appendix:dpc_led_power}
 This section describes measured LED power values for a range of common LEDs. Each of these measurements was made at the sample plane using an optical power-meter (Thorlabs PM100D) at a distance of 60$mm$ from the LED.
 \begin{center}
-    \begin{tabular}{ | p{35mm} | c | c | p{70mm} |}
+    \begin{tabular}{ | p{35mm} | c | c | p{60mm} |}
     \hline
     \textbf{\centering LED Mfg. \newline Part Number} & \textbf{LED Type} & \textbf{Illuminance} & \textbf{Comment} \\ 
     \hline
@@ -104,7 +104,9 @@ We can therefore conclude that
     \frac{1}{\min_{i} c_i}   \cdot \sum_{i=1}^m \frac{1}{|\tilde \h|_i^2}\:.
 \end{align*}
 Thus we see that the expression for the covariance is decreased by a factor of at least the square root of minimum coverage. This corresponds to the lower bound on the SNR:
-\[SNR \geq \sqrt{{\min_{i} c_i}}\cdot \frac{ \gamma\bar s}{ f \sigma_\eta  }\:.\]
+$$
+SNR \geq \sqrt{{\min_{i} c_i}}\cdot \frac{ \gamma\bar s}{ f \sigma_\eta  }\:
+$$
 Where $f$ is defined as in~\eqref{eq:DNF}.
 
 

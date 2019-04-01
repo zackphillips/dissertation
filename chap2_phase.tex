@@ -95,7 +95,7 @@ Amongst the wide array of existing QPI methods, several are single-shot techniqu
 Single-shot color Differential Phase Contrast (cDPC) microscopy. a) Installation in Nikon TE300 microscope condenser turret. b) CAD model and image of fabricated cDPC insert.c) Optical schematic of a brightfield microscope with a cDPC color filter placed at the back focal plane of the condenser in K\"{o}hler configuration. d) Reconstruction: the captured color image is separated into its RGB components, which are then used to recover two unknowns (amplitude and phase) via a well-posed linear deconvolution. The sample is a micro-lens array (Fresnel Technologies 605). }
 \end{figure}
 
-To improve temporal resolution of a DPC system without compromising spatial resolution a multiplexing configuration is necessary to make the problem well-posed. The proposed alternative method, color Differential Phase Contrast (cDPC), requires only a \emph{single} color image for multiplexing source patterns\footnote{This work was performed in close collaboration with Michael Chen (Waller Lab, EECS, UC Berkeley).}. In this method, the source is discretized into three color channels which are used to display three different half-circle source patterns. It is important to note that while the original DPC algorithm presented in \cite{tian2015quantitative} requires 4 images, the proposed method only requires 3, since the 4th source configuration can be synthesized by taking the sum of two images acquired with opposite half-circle illuminations (a synthetic brightfield image) and subtracting that of a 90 degree rotated half-circle source. In early prototypes the color source pattern pattern was implemented in an LED array microscope, which offers many imaging modalities in one platform~\cite{Tian14,zijiMulti,tian2015quantitative,Ma:15,phillips2015multi, Zheng2011, Zheng2013}. However, the proposed configuration does not require a dynamic source, making it possible to use a static multi-color filter placed in the condenser back focal plane, assuming K\"{o}hler illumination. Both configurations simplify hardware and reduce costs significantly as compared to phase contrast or DIC, while providing quantitative phase, which is more general and can be used to synthesize both of the afork ,mementioned methods digitally~\cite{JMI:JMI1027}.
+To improve temporal resolution of a DPC system without compromising spatial resolution a multiplexing configuration is necessary to make the problem well-posed. The proposed alternative method, color Differential Phase Contrast (cDPC), requires only a \emph{single} color image for multiplexing source patterns\footnote{This work was performed in close collaboration with Michael Chen (Waller Lab, EECS, UC Berkeley).}. In this method, the source is discretized into three color channels which are used to display three different half-circle source patterns. It is important to note that while the original DPC algorithm presented in \cite{tian2015quantitative} requires 4 images, the proposed method only requires 3, since the 4th source configuration can be synthesized by taking the sum of two images acquired with opposite half-circle illuminations (a synthetic brightfield image) and subtracting that of a 90 degree rotated half-circle source. In early prototypes the color source pattern pattern was implemented in an LED array microscope, which offers many imaging modalities in one platform~\cite{Tian14,zijiMulti,tian2015quantitative,Ma:15,phillips2015multi, Zheng2011, Zheng2013}. However, the proposed configuration does not require a dynamic source, making it possible to use a static multi-color filter placed in the condenser back focal plane, assuming K\"{o}hler illumination. Both configurations simplify hardware and reduce costs significantly as compared to phase contrast or DIC, while providing quantitative phase, which is more general and can be used to synthesize both of the aforementioned methods digitally~\cite{JMI:JMI1027}.
 
 \subsubsection{Hardware Design}
 As in conventional DPC, this method requires measurements of the sample illuminated by known asymmetric sources. In cDPC, however, we make use of the microscope's existing condenser unit, which has a turret commonly used for phase contrast inserts or DIC prisms. This intermediate plane can usually be accessed easily by removing the mechanical inserts. Taking advantage of this configuration, a simple 3D printed color filter was designed and fabricated that can be placed in the condenser turret of a Nikon TE300 microscope (Figure~\ref{fig:dpc_cdpchardware}a).
@@ -114,7 +114,7 @@ Illumination-side calibration corrects for the relative spectral transmittance o
 \centering
 \includegraphics[width=0.8\textwidth]{figures/fig_cdpc_transferfuncs.pdf}
 \caption{\label{fig:transferfunctions}
-Transfer functions for amplitude and phase contrast in each cDPC color channel. Left: Spectral contribution of each illumination filter as captured by the camera's Bayer pattern. The following columns show the components of the amplitude and phase transfer functions in the spatial frequency domain and the source represented in each image.  Bottom row: sum of each column, representing the calibrated and scaled source and the total coverage of amplitude and phase transfer functions, respectively. }
+Transfer functions for amplitude and phase contrast in each cDPC color channel. Left: Spectral contribution of each illumination filter as captured by the camera's Bayer pattern. The following columns show the components of the amplitude and phase transfer functions in the spatial frequency domain and the source represented in each image.  Bottom row: sum of each column, representing the calibrated and scaled source and the total coverage of amplitude and phase transfer functions, respectively.}
 \end{figure}
 
 When filtered by the sensor Bayer pattern, the filter spectrum bases are not orthogonal. This can be seen in the spectra of each PET film after capture with a color camera (left column of Fig.~\ref{fig:transferfunctions}). The result is an undesirable loss of asymmetry in the source that reduces phase SNR. However, it is possible to account for the asymmetry during reconstruction by modeling the source patterns as in Fig.~\ref{fig:transferfunctions}.
@@ -160,11 +160,12 @@ Using the forward model developed in Section~\ref{sec:forward}, the cDPC inverse
 \end{split}
 \end{equation}
 
-\noindent where $\tilde{\vec{I}}'$ is the spatial frequency spectrum of the background-subtracted intensity, $m$ is the wavelength index and $\op{R}(\tilde{\vec{\mu}},\tilde{\vec{\phi}})$ is a regularization term (typically on the order of $10^{-3}$). This problem is linear and can be solved with a one-step least-square solution (e.g. Wiener deconvolution~\cite{HayesDSP}) or by an iterative algorithm (e.g. gradient descent). The ideal choice of regularizer $\op{R}(\tilde{\vec{\mu}},\tilde{\vec{\phi}})$ depends on the sample and noise. Basic $\ell_2$ regularization should be tuned to suppress noise amplification in spatial frequencies that are measured with low-contrast, without destroying sample information at those frequencies. Alternatively, if the sample is sparse (only a few non-zero values), one can use an $\ell_1$ regularizer~\cite{2002_l1_sparcity}. Other types of \textit{a priori} information may be incorporated by appropriate regularization. In the experiments presented here no assumptions on the sample structure were made; However, $\ell_2$ regularization is used to constrain the total energy of the signal and make the problem well-posed. Equation~\eqref{eq:objectivefunction} thus becomes,
+\noindent where $\tilde{\vec{I}}'$ is the spatial frequency spectrum of the background-subtracted intensity, $m$ is the wavelength index and $\op{R}(\tilde{\vec{\mu}},\tilde{\vec{\phi}})$ is a regularization term (typically on the order of $10^{-3}$). This problem is linear and can be solved with a one-step least-square solution (e.g. Wiener deconvolution~\cite{HayesDSP}) or by an iterative algorithm (e.g. gradient descent). The ideal choice of regularizer $\op{R}(\tilde{\vec{\mu}},\tilde{\vec{\phi}})$ depends on the sample and noise. Basic $\ell_2$ regularization should be tuned to suppress noise amplification in spatial frequencies that are measured with low-contrast, without destroying sample information at those frequencies.
+Alternatively, if the sample is sparse (only a few non-zero values), one can use an $\ell_1$ regularizer~\cite{2002_l1_sparsity}. Other types of \textit{a priori} information may be incorporated by appropriate regularization. In the experiments presented here no assumptions on the sample structure were made; However, $\ell_2$ regularization is used to constrain the total energy of the signal and make the problem well-posed. Equation~\ref{eq:objectivefunction} thus becomes,
 
 \begin{equation}\label{eq:objectivefunction2}
 \begin{split}
-\min_{\vec{\mu},\vec{\phi}} \sum_{m=1}^{3} \frac{1}{2}  \parallel\tilde{\vec{I}}'(\lambda_m) - \tilde{\vec{H}}_{\mu}(\lambda_m)\cdot \tilde{\vec{\mu}} - \mathrm{i}\cdot\tilde{\vec{H}}_{\vec{\phi}}(\lambda_m)\cdot \tilde{\vec{\phi}} \parallel_2^2 + \gamma_{\vec{\mu}}\cdot \parallel \vec{\mu} \parallel^2_2 + \gamma_{\vec{\phi}}\cdot \parallel \vec{\phi}\parallel^2_2,
+\min_{\vec{\mu},\vec{\phi}} \sum_{m=1}^{3} \frac{1}{2}  \parallel\tilde{\vec{I}}'(\lambda_m) - \tilde{\vec{H}}_{\mu}(\lambda_m)\cdot \tilde{\vec{\mu}} - \mathrm{i}\cdot\tilde{\vec{H}}_{\vec{\phi}}(\lambda_m)\cdot \tilde{\vec{\phi}} \parallel_2^2 + \gamma_{\vec{\mu}}\cdot \parallel \vec{\mu} \parallel^2_2 + \gamma_{\vec{\phi}}\cdot \parallel \vec{\phi}\parallel^2_2
 \end{split}
 \end{equation}
 
@@ -188,7 +189,7 @@ As can be seen in Fig.~\ref{fig:spatialRes}, the RGB color channel images have s
 Next, the LED array was removed and replaced with the existing illumination pathway. For illumination, a broadband arc lamp light source was used. Alternatively, a high-power blue-phosphor static LED source could be used. The color filter insert shown in Fig.~\ref{fig:dpc_cdpchardware}b was then installed into the condenser turret. Figure~\ref{fig:mosaic} shows amplitude and phase reconstructions from the proposed cDPC method with objectives of various magnification. The cDPC method is compatible with any standard objective having $ NA_{objective}\leq NA_{illumination}$. If an objective with larger NA than the condenser NA is used, the low frequencies of phase will not be transmitted during image formation (see the phase transfer function in Fig. \ref{fig:transferfunctions}), since phase contrast comes primarily from high-angle illumination. The spatial coherence factor $\sigma$ is often defined as:
 
 \begin{equation}
-\sigma = \frac{NA_{illumination}}{NA_{objective}}.
+\sigma = \frac{NA_{illumination}}{NA_{objective}}
 \end{equation}
 
 \noindent In other words, $\sigma < 1$ will result in reduced phase contrast as compared to the $\sigma \geq 1$ case. The Nikon TE300 microscope used in this study was configured with a 0.53 NA condenser lens. Imaging with a higher objective NA would require high-NA illumination (e.g. by using a domed LED array~\cite{phillips2015multi}). Temporal coherence is set by the bandwidth of the color filters, since these have narrower bandwidth than the camera filters. The full-width-half-maximum (FWHM) bandwidth for the filters used in this study was approximately 50nm, which is similar to the emission spectrum of the LED array used previously~\cite{tian2015quantitative}.
@@ -199,8 +200,6 @@ Next, the LED array was removed and replaced with the existing illumination path
 \caption{\label{fig:mosaic}
 Phase and amplitude reconstructions for various samples and magnifications. (First column) Micro-lens array, 4x 0.1 NA. (Second column) Wild-type c. elegans, 10x 0.25 NA. (Third column) HEK 293T cells, 20$\times$ 0.4 NA). (Fourth column) MCF7 cells, 20$\times$ 0.4 NA.}
 \end{figure}
-
-\clearpage
 
 \subsubsection{Temporal Resolution}
 Since cDPC is single-shot, temporal resolution is set by the camera's frame rate, giving a factor of 4 improvement over conventional DPC. Single-shot methods reduce artifacts due to motion blur and image registration. This can be seen in Fig.~\ref{fig:temporalRes}, where the performance cDPC and conventional DPC are compared when imaging a live c. elegans culture. Motion blur is significantly reduced with cDPC, since the sample changes rapidly between frames, even at 12.5 frames per second.
@@ -218,7 +217,7 @@ Experimental demonstration of motion blur reduction with cDPC vs. conventional D
 \centering
 \includegraphics[width=\textwidth]{figures/fig_cdpc_dic.pdf}
 \caption{\label{fig:synthDIC_PC}
-Comparison of standard DIC and PhC images to their synthesized counterparts from cDPC. Ground truth DIC images were acquired using a 20x 0.75 NA objective and phase contrast images using a 20x 0.4 NA PhC objective. cDPC images were acquired using a 20x 0.4 NA objective and the filter insert.}\end{figure}
+Comparison of standard DIC and PhC images to their synthesized counterparts from cDPC. Ground truth DIC images were acquired using a 20$\times$ 0.75 NA objective and phase contrast images using a 20$\times$ 0.4 NA PhC objective. cDPC images were acquired using a 20$\times$ 0.4 NA objective and the filter insert.}\end{figure}
 
 Differential Interference Contrast (DIC) and conventional Phase Contrast (PhC) microscopy are examples of the widespread adoption of phase imaging methods in medicine and biomedical research. Though both methods have gained widespread adoption, optical components required for their implementation remain expensive, and alignment by an experienced user is required for acceptable performance. Both DIC and phase contrast can be described by forward models which produce a qualitative mixture of amplitude and phase images~\cite{zernike1942phase, smithDIC}. Since the forward models of these systems are well known, quantitative phase imaging methods can be used to form these images digitally, mimicking the physical optical system through numerical simulation. Synthesized images from cDPC, as well as ground truth DIC and PhC images, are shown in Figure~\ref{fig:synthDIC_PC} to be comparable.
 
@@ -236,7 +235,8 @@ The cDPC method uses color multiplexing to recover complex-field, making an inhe
 \begin{figure}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/fig_phase_dpc_opt_transfer.pdf}
-    \caption{\label{fig:phase:cavitated_transfer_functions}
+    \label{fig:phase:cavitated_transfer_functions}
+    \caption{
     DPC transfer functions for amplitude and phase for a range of source cavitation values. As illumination is removed from the center of the source, the overall spectrum becomes more normalized, leading to higher relative values across the mid-range spatial frequencies. However, signal is simultaneously reduced due to lower light throughput. The trade-off between better conditioning and light throughput depends on the illumination power per pixel (or per led).}
 \end{figure}
 
@@ -245,14 +245,12 @@ The second assumption is that the sample is colorless, meaning that the absorpti
 \begin{equation} \label{outEq:monochrome}
 \vec{\mu}(\lambda) \approx \vec{\mu}_0.
 \end{equation}
-\noindent This is generally valid for unstained biological samples, which are transparent. Color variations due to filter transmission coefficients at different wavelengths are present, but can be removed by the calibration procedure described in Section 1.2. Color-dependent absorption, such as that created by stained samples, cannot be recovered and will cause errors in the phase result. In practice, these assumptions limit the applicability of the cDPC method to unstained uncolored samples. However, quantitative phase reveals the mechanical structure of the microenvironment with high contrast, which may eliminate the need for staining in many applications.
+\noindent This is generally valid for unstained biological samples, which are transparent. Color variations due to filter transmission coefficients at different wavelengths are present, but can be removed by the calibration procedure described in Section 1.2. Color-dependent absorption, such as that created by stained samples, cannot be recovered and will cause errors in the phase result. In practice, these assumptions limit the applicability of the cDPC method to unstained uncolored samples. However, quantitative phase reveals the mechanical structure of the micro-environment with high contrast, which may eliminate the need for staining in many applications.
 
 \begin{wrapfigure}{R}{0.3\textwidth}
   \label{fig:phase:dpc_cavitation}
-  \begin{center}
     \includegraphics[width=0.3\textwidth]{figures/fig_phase_dpc_optimization_cavitation.pdf}
-  \end{center}
-  \caption{Expected SNR of DPC reconstructions as a function of source cavitation. Source patterns with no cavitation generally provide nearly-optimal SNR, although a source with cavitation NA of approximately $NA / 2$ is optimal for high illuminance values.}
+  \caption{Expected SNR of DPC reconstructions as a function of source cavitation. Source patterns with no cavitation generally provide nearly-optimal SNR, although a source with cavitation NA of approximately $0.5NA$ is optimal for high illuminance values.}
 \end{wrapfigure}
 
 \section{SNR Analysis of DPC Phase Recovery Systems}
@@ -272,9 +270,7 @@ The goal of the DPC linearization is to facilitate the inversion of the block WO
 
 \begin{wrapfigure}{L}{0.3\textwidth}
   \label{fig:phase:dpc_measurement_count}
-  \begin{center}
     \includegraphics[width=0.3\textwidth]{figures/fig_phase_dpc_optimization_meas.pdf}
-  \end{center}
   \caption{Expected SNR of DPC reconstructions as a function of measurement count (equidistant angles). SNR increases with the square root of measurement count for more than three DPC measurements, which is the equivalent of averaging measurements under the same noise conditions. For two or less measurements, expected SNR decreases significantly, since there is not enough information to disambiguate phase and amplitude for all frequencies.}
 \end{wrapfigure}
 
@@ -289,7 +285,6 @@ Where $\pm$ indicates that both the positive and negative combinations should be
 
 
 With this analysis framework, explore the use of a cavitated DPC source in order to improve the conditioning. The cavitated ("C"-shaped) source was previously proposed~\cite{tian2015quantitative} as an alternative to a filled source ("D"-shaped) due to better conditioning of the deconvolution, particularly for low-frequencies of phase. This poor conditioning leads to low-frequency artifacts that often lead to a "halo"-like effect around the sample. Figure~\ref{fig:phase:cavitated_transfer_functions} illustrates the improvement in the phase transfer function at low frequencies for sources with high cavitation. These sources have a overall spectrum which is more flat, corresponding to lower expected noise amplification by the deconvolution process. However, we also expect the additional illumination power provided by center LEDs will also improve SNR, especially in the presence of signal-independent noise (readout or pattern noise). Therefore, we analyze our system across a two-dimensional space of illumination power (defined by illuminance (Lux) at the sample) and source cavitation (defined by the cavitation NA). The goal of this analysis is to determine the optimal cavitation (cavitation NA), given a particular LED source power. 
-
 
 
 To characterize the relative benefit to using a cavitated source, we simulated measurements performed under various illumination power values (illuminance), which correspond to different measurement SNR values, and evaluated the SNR in the presence of both signal-dependent (shot) noise as well as signal-independent (readout or fixed-pattern) noise sources corresponding to common parameters (The full system parameter list is given in Appendix~\ref{sec:appendix:phase}, Section ~\ref{sec:appendix:dpc_sys_param}). These illuminance values can be compared to measured source illuminance for LEDs used in this work (Appendix~\ref{sec:appendix:phase}, Section ~\ref{sec:appendix:dpc_led_power}). While most DPC sources are discrete, most DPC inversion implementations model the source as continuous to avoid (or average out) LED position calibration error. In this analysis, we adopt the same convention so that our analysis is smooth in terms of cavitation NA.
