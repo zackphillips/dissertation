@@ -1,7 +1,39 @@
 \chapter{Appendix} \label{ch:appendix}
 
 \section{Open-Source Code} \label{sec:appendix:opensource}
-Open-source availability
+Most of the source code used for these methods is available publically through the following repositories. Each project is licensed under the BSD 3-clause license.
+
+\begin{center}
+    \begin{tabular}{ | p{25mm} | p{70mm} | p{70mm} |}
+    \hline
+    \textbf{Repository} & \textbf{Description} & \textbf{URL} \\
+    \hline
+    \centering \texttt{llops} & GPU-acceleration library with numpy-like syntax and interchangeable backends. Also supports auto-differentiation and latex rendering through operators submodule. & https://github.com/zfphil/llops \\
+    \hline
+
+    \centering \texttt{comptic} & Computational microscopy library for python, including common functions for simulating optical systems. Also included scripts for acquisition using micro-manager. & https://github.com/zfphil/comptic \\
+    \hline
+
+    \centering \texttt{pydpc} & Python implementation of DPC algorithm, including simulation, processing real data, and aberration recovery. Also included analysis tools for analyzing SNR in DPC systems.& https://github.com/zfphil/pydpc \\
+    \hline
+
+    \centering \texttt{pyfpm} & Python implementation of FPM algorithm, including simulation, processing real data, aberration recovery, and source recovery. & https://github.com/zfphil/pyfpm \\
+    \hline
+
+    \centering \texttt{pydeblur} & Python implémentation of motion deblur algorithm. Also includes system analysis tools for convolutional forward models. & https://github.com/zfphil/pydeblur\\
+    \hline
+
+    \centering \texttt{illuminate} & LED array firmware with standardized API & https://github.com/zfphil/pydeblur\\
+    \hline
+
+    % \centering \texttt{illuminate \n controller} & High-level interfaces for controlling LED arrays, including MATLAB, python, micro-manager, and GUI interfaces. & https://github.com/zfphil/illuminatecontroller\\
+    % \hline
+
+    \centering \texttt{compcs} & CAD files and Android application for Computational CellScope. & https://github.com/zfphil/compcs\\
+    \hline
+
+    \end{tabular}
+\end{center}
 
 \section{Quantitative Phase Imaging}\label{sec:appendix:phase}
 
@@ -9,7 +41,7 @@ Open-source availability
 \begin{center}
     \begin{tabular}{ | c | c |}
     \hline
-    \textbf{Parameter} & \textbf{Value} \\ 
+    \textbf{Parameter} & \textbf{Value} \\
     \hline
     Objective Mag / NA& $10\times / 0.25NA$\\
     \hline
@@ -26,28 +58,36 @@ Open-source availability
     \end{tabular}
 \end{center}
 
+% aptf_green : 4666.4586 Lux
+% aptf_blue : 3499.8440 Lux
+% aptf_red : 2738.1699 Lux
+% vcc_white : 2236.8149 Lux
+% thorlabs_blue : 1156.9732 Lux
+
 \subsection{LED Illuminance Values for DPC Analysis}\label{sec:appendix:dpc_led_power}
-This section describes measured LED power values for a range of common LEDs. Each of these measurements was made at the sample plane using an optical power-meter (Thorlabs PM100D) at a distance of 60$mm$ from the LED.
+This section describes measured LED power values for a range of common LEDs. Each of these measurements was made at the sample plane using an optical power-meter (Thorlabs PM100D) at a distance of 50$mm$ from the LED.
 \begin{center}
-    \begin{tabular}{ | p{35mm} | c | c | p{70mm} |}
+    \begin{tabular}{ | p{35mm} | p{20mm} | p{35mm} | p{70mm} |}
     \hline
-    \textbf{\centering LED Mfg. \newline Part Number} & \textbf{LED Type} & \textbf{Illuminance} & \textbf{Comment} \\ 
+    \textbf{\centering LED Mfg. \newline Part Number} & \textbf{LED Type} & \textbf{Illuminance} & \textbf{Comment} \\
     \hline
     \centering VCC\newline VAOL-3LWY4 & Through-hole & 1000.42 Lux & Used in Computational CellScope~\cite{phillips2015multi}\\
     \hline
-    \centering Knightbright\newline APTF1616SEEZ & SMD & 653.85 Lux & Used for Quasi-Dome~\cite{phillips2017quasi}\\
+    \centering Knightbright\newline APTF1616SEEZ & SMD & (Red) 2738 Lux \newline (Green) 4666 Lux \newline (Blue) 3500 Lux & Used for Quasi-Dome~\cite{phillips2017quasi}\\
+    \hline
+    \centering VCC\newline VAOL-3LWY4 & Through-hole & 1000.42 Lux & Used for High-Throughput Fluorescence Imaging (Chapter~\ref{ch:highthroughput})\\
     \hline
     \end{tabular}
 \end{center}
 
 
-\section{High-Throughput System Analysis} 
+\section{High-Throughput System Analysis}
 \label{sec:appendix:hightroughput}
 \subsection{Derivation of SNR Expression}
 
 \label{sec:appendix:snr_derivation}
 
-In this section we derive the expression for the SNR of a recovered image. Considering the additive noise acquisition model, $\y = \A\x + \noise$, 
+In this section we derive the expression for the SNR of a recovered image. Considering the additive noise acquisition model, $\y = \A\x + \noise$,
 the recovered image $\widehat \x$ is given by:
 \[\widehat \x =  \A^\dagger  \y = \x +  \A^\dagger  \noise\:.\]
 In what follows, we assume only that $\noise$ is zero mean with covariance $\sigma_\noise^2 \I$,
@@ -59,7 +99,7 @@ Expanding the covariance term in the denominator,
 \begin{align*}
     \Sigma &= \mathbb{E}[ \A^\dagger  \noise( \A^\dagger  \noise)^\top]
     %\\
-    %&= \mathbb{E}[ A^\dagger  \eta\eta ^\top ( A^\dagger)^\top] 
+    %&= \mathbb{E}[ A^\dagger  \eta\eta ^\top ( A^\dagger)^\top]
     = \sigma_{ \noise}^2  \A^\dagger ( \A^\dagger)^\top\:,
 \end{align*}
 where we apply the assumption that the covariance of $\noise$ is $\sigma_\noise^2 \I$. Then,
@@ -136,12 +176,12 @@ The gradient step is defined as
     \tilde \h^{k+1} = \h^k + \alpha^k \sum_{i=0}^m   \frac{2}{(\F_i^\top \h^k)^{3}} \cdot \F_i\:,
 \end{align*}
 for potentially changing step size $\alpha^k$.
-%\nabla \sum_{i=0}^m \frac{1}{(F_i^\top h)^2} = \sum_{i=0}^m   -2(F_i^\top h)^{-3} \cdot \nabla (F_i^\top h)= 
+%\nabla \sum_{i=0}^m \frac{1}{(F_i^\top h)^2} = \sum_{i=0}^m   -2(F_i^\top h)^{-3} \cdot \nabla (F_i^\top h)=
 The projection step is defined as
 \begin{align*}
     \h^{k+1} = \Pi_{\mathcal{S}}(\tilde \h_{k+1})\:,
 \end{align*}
-where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficent methods for this projection exist~\cite{,gupta2010l1}.
+where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficent methods for this projection exist~\cite{gupta2010l1}.
 
 \subsection{Fundamental DNF Limits}\label{sec:appendix:dnf_limit}
 
@@ -158,7 +198,7 @@ Additionally, $\max_i |\tilde \h|_i$ is the DC component of the signal, which is
 As a result, $$ f^2 \geq \frac{\gamma^2}{\sum_{i=1}^m h_i^2}\:.$$
 Finally, we see that
 $$\max_{\h\in[0,1]^m} \sum_{i=1}^m h_i^2~:~ \sum_{i=1}^m h_i=\gamma$$
-is achieved for binary $h$ and has the maximum value $\gamma$. Therefore, 
+is achieved for binary $h$ and has the maximum value $\gamma$. Therefore,
 \[f^2 \geq \frac{\gamma^2}{\sum_{i=1}^m h_i^2} \geq \frac{\gamma^2}{\gamma} = \gamma\:.\]
 % \begin{lem}
 % We have the following relationship between average squared singular value and illumination values, $\frac{1}{m}\sum_{i=1}^m |\tilde h|_i^2 = \sum_{j=1}^d v_j^2$.
@@ -235,9 +275,9 @@ t_{coded} = \frac{\frac{\gamma \Delta}{M}}{v_{stage}}
     \begin{center}
     \begin{tabular}{ | c | c |}
     \hline
-    \textbf{Parameter} & \textbf{Value} \\ 
+    \textbf{Parameter} & \textbf{Value} \\
     \hline
-    Maximum Motion Stage Velocity & $40\frac{m}{s}$ \\ 
+    Maximum Motion Stage Velocity & $40\frac{m}{s}$ \\
     \hline
     Motion Stage Acceleration & $400 \frac{m}{s^2}$\\
     \hline
