@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: dissertation.aux
+The style file: osajnl.bst
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: dedication.aux
+A level-1 auxiliary file: acknowledgements.aux
+A level-1 auxiliary file: chap1_introduction.aux
+A level-1 auxiliary file: chap2_phase.aux
+A level-1 auxiliary file: chap3_high_throughput.aux
+A level-1 auxiliary file: chap4_fabrication.aux
+A level-1 auxiliary file: chap5_self_calibration.aux
+A level-1 auxiliary file: chap6_conclusion.aux
+A level-1 auxiliary file: appendix.aux
+Reallocated field_info (elt_size=4) to 10684 items from 5000.
+Database file #1: references.bib
+Warning--entry type for "phasics" isn't style-file defined
+--line 1439 of file references.bib
+Warning--entry type for "natureMilestones" isn't style-file defined
+--line 8884 of file references.bib
+Warning--I didn't find a database entry for "2004singleshotPSDH"
+Warning--empty journal in phillipstechnical
+Warning--empty year in phillipstechnical
+Warning--empty year in illuminate
+Warning--empty author in Dodt01101999
+Warning--empty booktitle in Turpin:1995
+You've used 195 entries,
+            2828 wiz_defined-function locations,
+            1789 strings with 43788 characters,
+and the built_in function-call counts, 169105 in all, are:
+= -- 21076
+> -- 2639
+< -- 23
++ -- 2055
+- -- 760
+* -- 7644
+:= -- 12116
+add.period$ -- 426
+call.type$ -- 195
+change.case$ -- 13
+chr.to.int$ -- 9
+cite$ -- 200
+duplicate$ -- 21471
+empty$ -- 10362
+format.name$ -- 920
+if$ -- 35369
+int.to.chr$ -- 0
+int.to.str$ -- 195
+missing$ -- 2245
+newline$ -- 593
+num.names$ -- 192
+pop$ -- 7768
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 11061
+stack$ -- 0
+substring$ -- 9216
+swap$ -- 19916
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 656
+width$ -- 198
+write$ -- 1761
+(There were 8 warnings)
