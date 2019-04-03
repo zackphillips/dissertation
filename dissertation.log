@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.1)  2 APR 2019 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.1)  3 APR 2019 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1227,8 +1227,10 @@ File: tikzlibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
 File: pgflibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
 \c@@todonotes@numberoftodonotes=\count286
-) (./dissertation.aux (./abstract.aux) (./chap1_introduction.aux)
-(./chap4_fabrication.aux) (./appendix.aux))
+) (./dissertation.aux (./abstract.aux) (./dedication.aux)
+(./acknowledgements.aux) (./chap1_introduction.aux) (./chap2_phase.aux)
+(./chap3_high_throughput.aux) (./chap4_fabrication.aux)
+(./chap5_self_calibration.aux) (./chap6_conclusion.aux) (./appendix.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -1373,24 +1375,41 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )) [4
 
 ]
-[1
+\openout2 = `dedication.aux'.
 
-] (./dissertation.toc) [2] (./dissertation.lof [3
 
-] [4]) [5] [6]
+(./dedication.tex) [1
+
+
+] (./dissertation.toc [2
+
+]
+Overfull \hbox (2.03766pt too wide) detected at line 90
+ \OT1/cmr/bx/n/12 106
+ []
+
+) [3] (./dissertation.lof [4
+
+] [5] [6] [7] [8] [9] [10]) [11] [12]
+\openout2 = `acknowledgements.aux'.
+
+
+(./acknowledgements.tex) [13
+
+]
 \openout2 = `chap1_introduction.aux'.
 
-
-(./chap1_introduction.texpdfTeX warning (ext4): destination with the same ident
-ifier (name{page.1}) has been already used, duplicate ignored
+ (./chap1_introduction.texpdfTeX warning (ext4): destination with the same iden
+tifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.15 
       [1
 
 
+
 ]
-<figures/fig_intro_comp_imaging.pdf, id=272, 963.6pt x 433.62pt>
+<figures/fig_intro_comp_imaging.pdf, id=616, 963.6pt x 433.62pt>
 File: figures/fig_intro_comp_imaging.pdf Graphic file (type pdf)
 <use figures/fig_intro_comp_imaging.pdf>
 Package pdftex.def Info: figures/fig_intro_comp_imaging.pdf  used on input line
@@ -1413,7 +1432,7 @@ e.1.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.37 
       <./figures/fig_intro_comp_imaging.pdf>]
-<figures/intro-4f.png, id=354, 122.859pt x 78.41295pt>
+<figures/intro-4f.png, id=697, 122.859pt x 78.41295pt>
 File: figures/intro-4f.png Graphic file (type png)
 <use figures/intro-4f.png>
 Package pdftex.def Info: figures/intro-4f.png  used on input line 42.
@@ -1434,43 +1453,20 @@ e.1.2}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.49 
       <./figures/intro-4f.png>] [5] [6]
-<figures/fig_intro_dnf.pdf, id=429, 1045.17479pt x 826.1545pt>
+<figures/fig_intro_dnf.pdf, id=771, 1045.17479pt x 826.1545pt>
 File: figures/fig_intro_dnf.pdf Graphic file (type pdf)
 <use figures/fig_intro_dnf.pdf>
 Package pdftex.def Info: figures/fig_intro_dnf.pdf  used on input line 145.
 (pdftex.def)             Requested size: 469.0pt x 370.71979pt.
-
-
-LaTeX Warning: Reference `ch:phase' on page 7 undefined on input line 149.
-
-
-LaTeX Warning: Reference `ch:highthroughput' on page 7 undefined on input line 
-149.
-
-[7] [8pdfTeX warning (ext4): destination with the same identifier (name{figure.
-1.3}) has been already used, duplicate ignored
+ [7] [8pdfTeX warning (ext4): destination with the same identifier (name{figure
+.1.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.151 \section
               {Coded Illumination for Optical Microscopy} <./figures/fig_intro_
-dnf.pdf>]
-
-LaTeX Warning: Reference `ch:phase' on page 9 undefined on input line 161.
-
-
-LaTeX Warning: Reference `ch:highthroughput' on page 9 undefined on input line 
-161.
-
-
-LaTeX Warning: Reference `ch:selfcal' on page 9 undefined on input line 161.
-
-
-LaTeX Warning: Reference `ch:conclusion' on page 9 undefined on input line 161.
-
-
-[9]
-<figures/fig_intro_dome_system.pdf, id=547, 216.81pt x 289.08pt>
+dnf.pdf>] [9]
+<figures/fig_intro_dome_system.pdf, id=895, 216.81pt x 289.08pt>
 File: figures/fig_intro_dome_system.pdf Graphic file (type pdf)
 <use figures/fig_intro_dome_system.pdf>
 Package pdftex.def Info: figures/fig_intro_dome_system.pdf  used on input line 
@@ -1481,265 +1477,770 @@ Package pdftex.def Info: figures/fig_intro_dome_system.pdf  used on input line
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.130 \include{chap1_introduction}
+l.115 \include{chap1_introduction}
                                    <./figures/fig_intro_dome_system.pdf>]
-\openout2 = `chap4_fabrication.aux'.
+\openout2 = `chap2_phase.aux'.
 
 
-(./chap4_fabrication.tex [11
+(./chap2_phase.tex [11
 
 
 
-]
-<figures/fig_dome_overview.png, id=605, 997.7275pt x 519.9425pt>
-File: figures/fig_dome_overview.png Graphic file (type png)
-<use figures/fig_dome_overview.png>
-Package pdftex.def Info: figures/fig_dome_overview.png  used on input line 29.
-(pdftex.def)             Requested size: 469.0pt x 244.40474pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12] [13pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.1}) has been already used, duplicate ignored
+] [12]
+<figures/fig_phase_dpc_transfer.png, id=967, 839.135pt x 543.02875pt>
+File: figures/fig_phase_dpc_transfer.png Graphic file (type png)
+<use figures/fig_phase_dpc_transfer.png>
+Package pdftex.def Info: figures/fig_phase_dpc_transfer.png  used on input line
+ 20.
+(pdftex.def)             Requested size: 469.0pt x 303.5057pt.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.40 
-      <./figures/fig_dome_overview.png>]
-<figures/fig_ccs_dome.png, id=627, 1063.8144pt x 456.2646pt>
-File: figures/fig_ccs_dome.png Graphic file (type png)
-<use figures/fig_ccs_dome.png>
-Package pdftex.def Info: figures/fig_ccs_dome.png  used on input line 48.
-(pdftex.def)             Requested size: 469.0pt x 201.15387pt.
-<figures/fig_qdome_main.png, id=632, 692.5875pt x 172.645pt>
-File: figures/fig_qdome_main.png Graphic file (type png)
-<use figures/fig_qdome_main.png>
-Package pdftex.def Info: figures/fig_qdome_main.png  used on input line 69.
-(pdftex.def)             Requested size: 469.0pt x 116.91231pt.
- [14] [15pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.2.2}) has been already used, duplicate ignored
+l.35 
+      <./figures/fig_phase_dpc_transfer.png>]
+Overfull \hbox (10.08788pt too wide) detected at line 58
+[][]\OML/cmm/m/it/12 ^^V \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 F[] []
+ []
+
+
+Overfull \hbox (18.04762pt too wide) detected at line 62
+[][]\OML/cmm/m/it/12 ^^^ \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 F[] [] ;
+ []
+
+<figures/fig_phase_dpc_validation_2.pdf, id=986, 441.06079pt x 162.77312pt>
+File: figures/fig_phase_dpc_validation_2.pdf Graphic file (type pdf)
+<use figures/fig_phase_dpc_validation_2.pdf>
+Package pdftex.def Info: figures/fig_phase_dpc_validation_2.pdf  used on input 
+line 68.
+(pdftex.def)             Requested size: 469.0pt x 173.09502pt.
+[14]
+<figures/fig_fabrication_dome_multi.png, id=1004, 829.0975pt x 490.83376pt>
+File: figures/fig_fabrication_dome_multi.png Graphic file (type png)
+<use figures/fig_fabrication_dome_multi.png>
+Package pdftex.def Info: figures/fig_fabrication_dome_multi.png  used on input 
+line 80.
+(pdftex.def)             Requested size: 469.0pt x 277.65112pt.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.74 
-      <./figures/fig_ccs_dome.png>]
-<figures/fig_fabrication_slow_circuit.pdf, id=653, 705.92934pt x 184.2895pt>
-File: figures/fig_fabrication_slow_circuit.pdf Graphic file (type pdf)
-<use figures/fig_fabrication_slow_circuit.pdf>
-Package pdftex.def Info: figures/fig_fabrication_slow_circuit.pdf  used on inpu
-t line 81.
-(pdftex.def)             Requested size: 469.0pt x 122.43849pt.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-3}) has been already used, duplicate ignored
+l.85 
+      <./figures/fig_phase_dpc_validation_2.pdf>]
+
+LaTeX Warning: Citation `2004singleshotPSDH' on page 16 undefined on input line
+ 87.
+
+<figures/fig_cdpc_system.pdf, id=1041, 393.09659pt x 269.29407pt>
+File: figures/fig_cdpc_system.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_system.pdf>
+Package pdftex.def Info: figures/fig_cdpc_system.pdf  used on input line 91.
+(pdftex.def)             Requested size: 469.0pt x 321.28983pt.
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.88 
-      <./figures/fig_qdome_main.png>] [17pdfTeX warning (ext4): destination wit
-h the same identifier (name{figure.2.4}) has been already used, duplicate ignor
-ed
+l.94 \end{figure}
+                  <./figures/fig_fabrication_dome_multi.png>] [17pdfTeX warning
+ (ext4): destination with the same identifier (name{figure.2.4}) has been alrea
+dy used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.96 
-      <./figures/fig_fabrication_slow_circuit.pdf>]
-<figures/fig_fabrication_fast_circuit.pdf, id=691, 203.68196pt x 123.34583pt>
-File: figures/fig_fabrication_fast_circuit.pdf Graphic file (type pdf)
-<use figures/fig_fabrication_fast_circuit.pdf>
-Package pdftex.def Info: figures/fig_fabrication_fast_circuit.pdf  used on inpu
-t line 99.
-(pdftex.def)             Requested size: 234.5pt x 142.0141pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-5}) has been already used, duplicate ignored
+l.97 
+      <./figures/fig_cdpc_system.pdf>]
+<figures/fig_cdpc_transferfuncs.pdf, id=1211, 325.2721pt x 223.64142pt>
+File: figures/fig_cdpc_transferfuncs.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_transferfuncs.pdf>
+Package pdftex.def Info: figures/fig_cdpc_transferfuncs.pdf  used on input line
+ 113.
+(pdftex.def)             Requested size: 469.0pt x 322.48016pt.
+ [18] [19pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.109 
-       <./figures/fig_fabrication_fast_circuit.pdf>]
-<figures/fig_ccs_system.png, id=734, 869.1672pt x 470.2368pt>
-File: figures/fig_ccs_system.png Graphic file (type png)
-<use figures/fig_ccs_system.png>
-Package pdftex.def Info: figures/fig_ccs_system.png  used on input line 118.
-(pdftex.def)             Requested size: 469.0pt x 253.73752pt.
-<figures/fig_ccs_mosaic.png, id=735, 650.43pt x 904.3386pt>
-File: figures/fig_ccs_mosaic.png Graphic file (type png)
-<use figures/fig_ccs_mosaic.png>
-Package pdftex.def Info: figures/fig_ccs_mosaic.png  used on input line 127.
-(pdftex.def)             Requested size: 314.22914pt x 436.9064pt.
-
-
-LaTeX Warning: Float too large for page by 4.80684pt on input line 132.
-
-[19] [20pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.6}) has been already used, duplicate ignored
+l.121 
+       <./figures/fig_cdpc_transferfuncs.pdf>] [20]
+<figures/fig_cdpc_comparison.pdf, id=1294, 429.60056pt x 236.12677pt>
+File: figures/fig_cdpc_comparison.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_comparison.pdf>
+Package pdftex.def Info: figures/fig_cdpc_comparison.pdf  used on input line 17
+3.
+(pdftex.def)             Requested size: 469.0pt x 257.7838pt.
+ [21] [22pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.146 
-       <./figures/fig_ccs_system.png>] [21pdfTeX warning (ext4): destination wi
-th the same identifier (name{figure.2.7}) has been already used, duplicate igno
-red
+l.188 \begin{equation}
+                       <./figures/fig_cdpc_comparison.pdf>]
+<figures/fig_cdpc_video.pdf, id=1538, 298.37302pt x 204.42302pt>
+File: figures/fig_cdpc_video.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_video.pdf>
+Package pdftex.def Info: figures/fig_cdpc_video.pdf  used on input line 196.
+(pdftex.def)             Requested size: 422.09714pt x 289.21593pt.
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.146 
-       <./figures/fig_ccs_mosaic.png>] [22]
-<figures/fig_ccs_refocus.png, id=787, 706.8006pt x 579.1236pt>
-File: figures/fig_ccs_refocus.png Graphic file (type png)
-<use figures/fig_ccs_refocus.png>
-Package pdftex.def Info: figures/fig_ccs_refocus.png  used on input line 164.
-(pdftex.def)             Requested size: 469.0pt x 384.28171pt.
- [23] [24pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.2.8}) has been already used, duplicate ignored
+l.201 \clearpage
+                 <./figures/fig_cdpc_video.pdf>]
+<figures/fig_cdpc_time.pdf, id=1602, 396.27681pt x 140.51065pt>
+File: figures/fig_cdpc_time.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_time.pdf>
+Package pdftex.def Info: figures/fig_cdpc_time.pdf  used on input line 208.
+(pdftex.def)             Requested size: 469.0pt x 166.30708pt.
+<figures/fig_cdpc_dic.pdf, id=1603, 327.89487pt x 178.37892pt>
+File: figures/fig_cdpc_dic.pdf Graphic file (type pdf)
+<use figures/fig_cdpc_dic.pdf>
+Package pdftex.def Info: figures/fig_cdpc_dic.pdf  used on input line 217.
+(pdftex.def)             Requested size: 375.20143pt x 204.12436pt.
+ [24
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.176 
-       <./figures/fig_ccs_refocus.png>] [25]
-<figures/fig_ccs_app.png, id=807, 919.2744pt x 386.4036pt>
-File: figures/fig_ccs_app.png Graphic file (type png)
-<use figures/fig_ccs_app.png>
-Package pdftex.def Info: figures/fig_ccs_app.png  used on input line 186.
-(pdftex.def)             Requested size: 469.0pt x 197.13986pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+l.224 
+       <./figures/fig_cdpc_time.pdf>]
+<figures/fig_phase_dpc_opt_transfer.pdf, id=1712, 879.76175pt x 507.09853pt>
+File: figures/fig_phase_dpc_opt_transfer.pdf Graphic file (type pdf)
+<use figures/fig_phase_dpc_opt_transfer.pdf>
+Package pdftex.def Info: figures/fig_phase_dpc_opt_transfer.pdf  used on input 
+line 236.
+(pdftex.def)             Requested size: 469.0pt x 270.33168pt.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.197 
-       <./figures/fig_ccs_app.png>]) [27] [28]
-\openout2 = `appendix.aux'.
+l.244 \end{equation}
+                     <./figures/fig_cdpc_dic.pdf>]
+<figures/fig_phase_dpc_optimization_cavitation.pdf, id=1752, 157.9885pt x 302.1
+161pt>
+File: figures/fig_phase_dpc_optimization_cavitation.pdf Graphic file (type pdf)
 
- (./appendix.tex
-Overfull \hbox (37.3154pt too wide) in paragraph at lines 7--36
- [] 
+<use figures/fig_phase_dpc_optimization_cavitation.pdf>
+Package pdftex.def Info: figures/fig_phase_dpc_optimization_cavitation.pdf  use
+d on input line 250.
+(pdftex.def)             Requested size: 140.70143pt x 269.06226pt.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.256 D
+       ifferential Phase Contrast linearizes the partially coherent image fo...
+ <./figures/fig_phase_dpc_opt_transfer.pdf>]
+<figures/fig_phase_dpc_optimization_meas.pdf, id=1850, 165.17178pt x 300.30148p
+t>
+File: figures/fig_phase_dpc_optimization_meas.pdf Graphic file (type pdf)
+<use figures/fig_phase_dpc_optimization_meas.pdf>
+Package pdftex.def Info: figures/fig_phase_dpc_optimization_meas.pdf  used on i
+nput line 276.
+(pdftex.def)             Requested size: 140.70143pt x 255.83482pt.
+
+Underfull \hbox (badness 3098) in paragraph at lines 278--278
+\OT1/cmr/m/n/12 (+20) SNR in-creases with the
  []
 
-[29
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.281 \begin{equation}
+                       \label{eq:phase_wotf_singular_values} <./figures/fig_pha
+se_dpc_optimization_cavitation.pdf>] [28pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.2.12}) has been already used, duplicate ignor
+ed
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.291 \clearpage
+                 <./figures/fig_phase_dpc_optimization_meas.pdf>]) [29
+
+]
+[30]
+\openout2 = `chap3_high_throughput.aux'.
+
+ (./chap3_high_throughput.tex [31
 
 
 
-] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
-[]|\OT1/cmr/bx/n/12 LED
- []
+] [32]
+<figures/fig_highthroughput_sbp.png, id=2055, 883.3pt x 428.60126pt>
+File: figures/fig_highthroughput_sbp.png Graphic file (type png)
+<use figures/fig_highthroughput_sbp.png>
+Package pdftex.def Info: figures/fig_highthroughput_sbp.png  used on input line
+ 40.
+(pdftex.def)             Requested size: 469.0pt x 227.5696pt.
+ [33] [34pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.3.1}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 
+      <./figures/fig_highthroughput_sbp.png>]
+<figures/fig_highthroughput_scanning.png, id=2074, 654.445pt x 297.11pt>
+File: figures/fig_highthroughput_scanning.png Graphic file (type png)
+<use figures/fig_highthroughput_scanning.png>
+Package pdftex.def Info: figures/fig_highthroughput_scanning.png  used on input
+ line 50.
+(pdftex.def)             Requested size: 281.40286pt x 127.75027pt.
+<figures/fig_highthroughput_system.pdf, id=2076, 519.98967pt x 171.04803pt>
+File: figures/fig_highthroughput_system.pdf Graphic file (type pdf)
+<use figures/fig_highthroughput_system.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_system.pdf  used on input l
+ine 58.
+(pdftex.def)             Requested size: 469.0pt x 154.27849pt.
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+2}) has been already used, duplicate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
-[]|\OT1/cmr/m/n/12 (+20) Through-
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.66 
+      <./figures/fig_highthroughput_scanning.png>]
+<figures/fig_highthroughput_forward_model.pdf, id=2084, 538.15355pt x 197.73875
+pt>
+File: figures/fig_highthroughput_forward_model.pdf Graphic file (type pdf)
+<use figures/fig_highthroughput_forward_model.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_forward_model.pdf  used on 
+input line 69.
+(pdftex.def)             Requested size: 328.29857pt x 120.63554pt.
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+3}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.76 
+      <./figures/fig_highthroughput_system.pdf>] [37pdfTeX warning (ext4): dest
+ination with the same identifier (name{figure.3.4}) has been already used, dupl
+icate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[]|\OT1/cmr/m/n/12 (+20) Through-
- []
-
-
-LaTeX Warning: Reference `ch:highthroughput' on page 31 undefined on input line
- 78.
-
-
-Overfull \hbox (35.48901pt too wide) in paragraph at lines 70--81
- [] 
- []
-
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 
+      <./figures/fig_highthroughput_forward_model.pdf>]
+<figures/fig_highthroughput_illumination_optimization.pdf, id=2273, 402.46861pt
+ x 167.63329pt>
+File: figures/fig_highthroughput_illumination_optimization.pdf Graphic file (ty
+pe pdf)
+<use figures/fig_highthroughput_illumination_optimization.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_illumination_optimization.p
+df  used on input line 99.
+(pdftex.def)             Requested size: 469.0pt x 195.35765pt.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+5}) has been already used, duplicate ignored
 
-LaTeX Warning: Reference `eq:DNF' on page 31 undefined on input line 109.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.116 
+       <./figures/fig_highthroughput_illumination_optimization.pdf>] [39]
+<figures/fig_highthroughput_full_field.pdf, id=2362, 621.8763pt x 285.26775pt>
+File: figures/fig_highthroughput_full_field.pdf Graphic file (type pdf)
+<use figures/fig_highthroughput_full_field.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_full_field.pdf  used on inp
+ut line 146.
+(pdftex.def)             Requested size: 469.0pt x 215.14731pt.
 
-[31]
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
+}) has been already used, duplicate ignored
 
-LaTeX Warning: Reference `eq:DNF' on page 32 undefined on input line 148.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.164 
+       <./figures/fig_highthroughput_full_field.pdf>] [41] [42] [43]
+<figures/fig_highthroughput_snr_comparison.pdf, id=2474, 321.56134pt x 713.3581
+pt>
+File: figures/fig_highthroughput_snr_comparison.pdf Graphic file (type pdf)
+<use figures/fig_highthroughput_snr_comparison.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_snr_comparison.pdf  used on
+ input line 236.
+(pdftex.def)             Requested size: 211.04857pt x 468.20541pt.
+ [44]
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.245 
+       <./figures/fig_highthroughput_snr_comparison.pdf>]
+<figures/fig_highthroughput_component_analysis.pdf, id=2567, 622.34706pt x 306.
+65665pt>
+File: figures/fig_highthroughput_component_analysis.pdf Graphic file (type pdf)
+
+<use figures/fig_highthroughput_component_analysis.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_component_analysis.pdf  use
+d on input line 252.
+(pdftex.def)             Requested size: 469.0pt x 231.0962pt.
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.257 
+       <./figures/fig_highthroughput_component_analysis.pdf>] [47]
+<figures/fig_highthroughput_fluorescence_analysis.pdf, id=2985, 321.61656pt x 1
+67.7487pt>
+File: figures/fig_highthroughput_fluorescence_analysis.pdf Graphic file (type p
+df)
+<use figures/fig_highthroughput_fluorescence_analysis.pdf>
+Package pdftex.def Info: figures/fig_highthroughput_fluorescence_analysis.pdf  
+used on input line 305.
+(pdftex.def)             Requested size: 328.29857pt x 171.24474pt.
+ [48])
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.117 \include{chap3_high_throughput}
+                                      <./figures/fig_highthroughput_fluorescenc
+e_analysis.pdf>] [50]
+\openout2 = `chap4_fabrication.aux'.
+
+ (./chap4_fabrication.tex [51
 
 
-LaTeX Warning: Reference `eq:illum_opt_single' on page 32 undefined on input li
-ne 155.
 
-[32]
+]
+<figures/fig_dome_overview.png, id=3080, 997.7275pt x 519.9425pt>
+File: figures/fig_dome_overview.png Graphic file (type png)
+<use figures/fig_dome_overview.png>
+Package pdftex.def Info: figures/fig_dome_overview.png  used on input line 29.
+(pdftex.def)             Requested size: 469.0pt x 244.40474pt.
+ [52] [53pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.1}) has been already used, duplicate ignored
 
-LaTeX Warning: Reference `eq:illum_opt_single' on page 33 undefined on input li
-ne 164.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.37 I
+      n most planar arrays (such as the Adafruit $32 \times 32$ array used i...
+ <./figures/fig_dome_overview.png>]
+<figures/fig_ccs_dome.png, id=3100, 1063.8144pt x 456.2646pt>
+File: figures/fig_ccs_dome.png Graphic file (type png)
+<use figures/fig_ccs_dome.png>
+Package pdftex.def Info: figures/fig_ccs_dome.png  used on input line 48.
+(pdftex.def)             Requested size: 469.0pt x 201.15387pt.
+ [54] [55pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.2}) has been already used, duplicate ignored
 
-[33]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.64 
+      <./figures/fig_ccs_dome.png>]
+<figures/fig_qdome_main.png, id=3118, 692.5875pt x 172.645pt>
+File: figures/fig_qdome_main.png Graphic file (type png)
+<use figures/fig_qdome_main.png>
+Package pdftex.def Info: figures/fig_qdome_main.png  used on input line 69.
+(pdftex.def)             Requested size: 469.0pt x 116.91231pt.
+<figures/fig_fabrication_slow_circuit.pdf, id=3124, 705.92934pt x 184.2895pt>
+File: figures/fig_fabrication_slow_circuit.pdf Graphic file (type pdf)
+<use figures/fig_fabrication_slow_circuit.pdf>
+Package pdftex.def Info: figures/fig_fabrication_slow_circuit.pdf  used on inpu
+t line 79.
+(pdftex.def)             Requested size: 469.0pt x 122.43849pt.
+ [56pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+3}) has been already used, duplicate ignored
 
-LaTeX Warning: Reference `eq:snr_coded' on page 34 undefined on input line 211.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.86 
+      <./figures/fig_qdome_main.png>] [57pdfTeX warning (ext4): destination wit
+h the same identifier (name{figure.4.4}) has been already used, duplicate ignor
+ed
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.94 
+      <./figures/fig_fabrication_slow_circuit.pdf>]
+<figures/fig_fabrication_fast_circuit.pdf, id=3162, 203.68196pt x 123.34583pt>
+File: figures/fig_fabrication_fast_circuit.pdf Graphic file (type pdf)
+<use figures/fig_fabrication_fast_circuit.pdf>
+Package pdftex.def Info: figures/fig_fabrication_fast_circuit.pdf  used on inpu
+t line 97.
+(pdftex.def)             Requested size: 187.59714pt x 113.60939pt.
+ [58pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.107 
+       <./figures/fig_fabrication_fast_circuit.pdf>]
+<figures/fig_ccs_system.png, id=3202, 869.1672pt x 470.2368pt>
+File: figures/fig_ccs_system.png Graphic file (type png)
+<use figures/fig_ccs_system.png>
+Package pdftex.def Info: figures/fig_ccs_system.png  used on input line 116.
+(pdftex.def)             Requested size: 375.20143pt x 202.98715pt.
+<figures/fig_ccs_mosaic.png, id=3203, 650.43pt x 904.3386pt>
+File: figures/fig_ccs_mosaic.png Graphic file (type png)
+<use figures/fig_ccs_mosaic.png>
+Package pdftex.def Info: figures/fig_ccs_mosaic.png  used on input line 125.
+(pdftex.def)             Requested size: 281.40286pt x 391.25906pt.
+ [59] [60pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.141 \end{equation}
+                     <./figures/fig_ccs_system.png>] [61pdfTeX warning (ext4): 
+destination with the same identifier (name{figure.4.7}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.141 \end{equation}
+                     <./figures/fig_ccs_mosaic.png>] [62]
+<figures/fig_ccs_refocus.png, id=3253, 706.8006pt x 579.1236pt>
+File: figures/fig_ccs_refocus.png Graphic file (type png)
+<use figures/fig_ccs_refocus.png>
+Package pdftex.def Info: figures/fig_ccs_refocus.png  used on input line 162.
+(pdftex.def)             Requested size: 469.0pt x 384.28171pt.
+ [63] [64pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.174 
+       <./figures/fig_ccs_refocus.png>] [65]
+<figures/fig_ccs_app.png, id=3274, 919.2744pt x 386.4036pt>
+File: figures/fig_ccs_app.png Graphic file (type png)
+<use figures/fig_ccs_app.png>
+Package pdftex.def Info: figures/fig_ccs_app.png  used on input line 184.
+(pdftex.def)             Requested size: 469.0pt x 197.13986pt.
+ [66] [67pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.198 
+       <./figures/fig_ccs_app.png>]) [68]
+\openout2 = `chap5_self_calibration.aux'.
+
+ (./chap5_self_calibration.tex
+[69
 
 
 
-LaTeX Warning: Reference `sec:highthroughput:illum_opt' on page 34 undefined on
- input line 216.
+] [70]
+<figures/fig_self_cal_dpc_joint_estimation.pdf, id=3371, 1373.13pt x 939.51pt>
+File: figures/fig_self_cal_dpc_joint_estimation.pdf Graphic file (type pdf)
+<use figures/fig_self_cal_dpc_joint_estimation.pdf>
+Package pdftex.def Info: figures/fig_self_cal_dpc_joint_estimation.pdf  used on
+ input line 29.
+(pdftex.def)             Requested size: 422.09714pt x 288.79367pt.
+ [71pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+1}) has been already used, duplicate ignored
 
-[34] [35]) [36] (./dissertation.bbl
-bibitemlist
-[37
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+      <./figures/fig_self_cal_dpc_joint_estimation.pdf>] [72] [73] [74]
+<figures/fig_self_cal_dpc_sim.pdf, id=3633, 1373.13pt x 722.7pt>
+File: figures/fig_self_cal_dpc_sim.pdf Graphic file (type pdf)
+<use figures/fig_self_cal_dpc_sim.pdf>
+Package pdftex.def Info: figures/fig_self_cal_dpc_sim.pdf  used on input line 1
+09.
+(pdftex.def)             Requested size: 469.0pt x 246.83955pt.
+
+[75] [76pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.5.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.120 
+       <./figures/fig_self_cal_dpc_sim.pdf>]
+<figures/fig_self_cal_dpc_results1.pdf, id=3761, 1373.13pt x 722.7pt>
+File: figures/fig_self_cal_dpc_results1.pdf Graphic file (type pdf)
+<use figures/fig_self_cal_dpc_results1.pdf>
+Package pdftex.def Info: figures/fig_self_cal_dpc_results1.pdf  used on input l
+ine 122.
+(pdftex.def)             Requested size: 469.0pt x 246.83955pt.
+ [77pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.127 
+       <./figures/fig_self_cal_dpc_results1.pdf>]
+<figures/fig_self_cal_dpc_results2.pdf, id=4229, 1373.13pt x 794.97pt>
+File: figures/fig_self_cal_dpc_results2.pdf Graphic file (type pdf)
+<use figures/fig_self_cal_dpc_results2.pdf>
+Package pdftex.def Info: figures/fig_self_cal_dpc_results2.pdf  used on input l
+ine 131.
+(pdftex.def)             Requested size: 469.0pt x 271.52351pt.
+ [78]
+<figures/fig_self_cal_dpc_results3.pdf, id=4236, 1303.32625pt x 1062.84946pt>
+File: figures/fig_self_cal_dpc_results3.pdf Graphic file (type pdf)
+<use figures/fig_self_cal_dpc_results3.pdf>
+Package pdftex.def Info: figures/fig_self_cal_dpc_results3.pdf  used on input l
+ine 140.
+(pdftex.def)             Requested size: 422.09714pt x 344.20564pt.
+ [79pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.145 
+       <./figures/fig_self_cal_dpc_results2.pdf>] [80pdfTeX warning (ext4): des
+tination with the same identifier (name{figure.5.5}) has been already used, dup
+licate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.149 
+       <./figures/fig_self_cal_dpc_results3.pdf>]
+<figures/fig_selfcal_fpm_overview.pdf, id=4362, 600.2425pt x 412.54124pt>
+File: figures/fig_selfcal_fpm_overview.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_overview.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_overview.pdf  used on input li
+ne 154.
+(pdftex.def)             Requested size: 398.65286pt x 273.99655pt.
+ [81] [82pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.5.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.167 
+       <./figures/fig_selfcal_fpm_overview.pdf>] [83]
+<figures/fig_selfcal_fpm_bf.pdf, id=4493, 326.21875pt x 419.5675pt>
+File: figures/fig_selfcal_fpm_bf.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_bf.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_bf.pdf  used on input line 194
+.
+(pdftex.def)             Requested size: 281.40286pt x 361.96057pt.
+ [84pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.201 
+       <./figures/fig_selfcal_fpm_bf.pdf>] [85]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 239.
+<figures/fig_selfcal_fpm_df.pdf, id=4571, 664.4825pt x 193.72375pt>
+File: figures/fig_selfcal_fpm_df.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_df.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_df.pdf  used on input line 264
+.
+(pdftex.def)             Requested size: 454.93057pt x 132.63197pt.
+ [86] [87pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.5.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.287 \end{equation}
+                     <./figures/fig_selfcal_fpm_df.pdf>]
+<figures/fig_selfcal_fpm_mosaic.pdf, id=4651, 846.16125pt x 466.74374pt>
+File: figures/fig_selfcal_fpm_mosaic.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_mosaic.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_mosaic.pdf  used on input line
+ 297.
+(pdftex.def)             Requested size: 469.0pt x 258.69687pt.
+<figures/fig_selfcal_fpm_system.pdf, id=4653, 666.49pt x 415.5525pt>
+File: figures/fig_selfcal_fpm_system.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_system.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_system.pdf  used on input line
+ 311.
+(pdftex.def)             Requested size: 469.0pt x 292.42558pt.
+ [88] [89pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.5.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.324 
+       <./figures/fig_selfcal_fpm_mosaic.pdf>] [90pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.5.10}) has been already used, dupli
+cate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.328 
+       <./figures/fig_selfcal_fpm_system.pdf>]
+<figures/fig_selfcal_fpm_accuracy.pdf, id=5013, 422.57875pt x 376.40625pt>
+File: figures/fig_selfcal_fpm_accuracy.pdf Graphic file (type pdf)
+<use figures/fig_selfcal_fpm_accuracy.pdf>
+Package pdftex.def Info: figures/fig_selfcal_fpm_accuracy.pdf  used on input li
+ne 334.
+(pdftex.def)             Requested size: 234.5pt x 208.88496pt.
+ [91pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.341 
+       <./figures/fig_selfcal_fpm_accuracy.pdf>] [92]) [93]
+\openout2 = `chap6_conclusion.aux'.
 
 
-] [38] [39] [40] [41] [42]
-Overfull \hbox (0.99707pt too wide) in paragraph at lines 436--438
-[]\OT1/cmr/m/n/12 (-20) D. Hamilton and C. Sheppard, ``Differential phase contr
-ast in scanning optical microscopy,''
+(./chap6_conclusion.tex
+<figures/avatar_phase.pdf, id=5093, 144.54pt x 144.54pt>
+File: figures/avatar_phase.pdf Graphic file (type pdf)
+<use figures/avatar_phase.pdf>
+Package pdftex.def Info: figures/avatar_phase.pdf  used on input line 5.
+(pdftex.def)             Requested size: 176.24817pt x 176.25691pt.
+ [94
+
+
+
+ <./figures/avatar_phase.pdf>]
+<figures/avatar_highthroughput.pdf, id=5144, 144.54pt x 144.54pt>
+File: figures/avatar_highthroughput.pdf Graphic file (type pdf)
+<use figures/avatar_highthroughput.pdf>
+Package pdftex.def Info: figures/avatar_highthroughput.pdf  used on input line 
+11.
+(pdftex.def)             Requested size: 176.24817pt x 176.25691pt.
+<figures/avatar_fabrication.pdf, id=5146, 144.54pt x 144.54pt>
+File: figures/avatar_fabrication.pdf Graphic file (type pdf)
+<use figures/avatar_fabrication.pdf>
+Package pdftex.def Info: figures/avatar_fabrication.pdf  used on input line 17.
+
+(pdftex.def)             Requested size: 140.99854pt x 141.00641pt.
+ [95 <./figures/avatar_highthroughput.pdf> <./figures/avatar_fabrication.pdf
+
+pdfTeX warning: pdflatex (file ./figures/avatar_fabrication.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+<figures/avatar_selfcal.pdf, id=5207, 144.54pt x 144.54pt>
+File: figures/avatar_selfcal.pdf Graphic file (type pdf)
+<use figures/avatar_selfcal.pdf>
+Package pdftex.def Info: figures/avatar_selfcal.pdf  used on input line 28.
+(pdftex.def)             Requested size: 176.24817pt x 176.25691pt.
+ [96 <./figures/avatar_selfcal.pdf>] [97]) [98]
+\openout2 = `appendix.aux'.
+
+ (./appendix.tex
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\OT1/cmr/bx/n/12 LED
  []
 
-[43]) [44]
+
+Overfull \hbox (9.88153pt too wide) in paragraph at lines 30--41
+ [] 
+ []
+
+[99
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\OT1/cmr/m/n/12 (+20) GPU-acceleration li-brary with
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 52--52
+\OT1/cmr/m/n/12 (+20) able back-ends. Also sup-ports
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+[]|[]$\OT1/cmtt/m/n/10 https : / / github . com / zfphil /
+ []
+
+
+Overfull \hbox (8.86264pt too wide) in paragraph at lines 48--77
+ [] 
+ []
+
+[100
+
+] [101] [102] [103] [104]) [105] (./dissertation.bbl
+bibitemlist
+[106
+
+
+] [107] [108] [109] [110] [111] [112] [113]
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+[]\OT1/cmr/m/n/12 (+20) ``Nikon Per-fect Fo-cus,'' []$\OT1/cmtt/m/n/12 https : 
+/ / www . microscopyu . com / applications /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--535
+[]\OT1/cmr/m/n/12 (+20) ``Zeiss Def-i-nite Fo-cus,'' []$\OT1/cmtt/m/n/12 https 
+: / / www . zeiss . com / microscopy / us / products /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--535
+\OT1/cmtt/m/n/12 light-[]microscopes / axio-[]observer-[]for-[]biology / defini
+te-[]focus . html$[]\OT1/cmr/m/n/12 (+20) . Ac-
+ []
+
+[114] [115] [116] [117] [118] [119] [120]) [121]
 \tf@toc=\write6
 \openout6 = `dissertation.toc'.
 
 \tf@lof=\write7
 \openout7 = `dissertation.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
- (./dissertation.aux (./abstract.aux) (./chap1_introduction.aux)
-(./chap4_fabrication.aux) (./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+ (./dissertation.aux
+(./abstract.aux) (./dedication.aux) (./acknowledgements.aux)
+(./chap1_introduction.aux) (./chap2_phase.aux) (./chap3_high_throughput.aux)
+(./chap4_fabrication.aux) (./chap5_self_calibration.aux)
+(./chap6_conclusion.aux) (./appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 6D6DA088DEA9DC88CB84A4C354D02959;1080.
+(rerunfilecheck)             Checksum: 1FEE90D96AC03FD5B12E610548366F2E;2443.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 24702 strings out of 492616
- 437240 string characters out of 6128983
- 608254 words of memory out of 5000000
- 27807 multiletter control sequences out of 15000+600000
- 24093 words of font info for 135 fonts, out of 8000000 for 9000
+ 25561 strings out of 492616
+ 454997 string characters out of 6128983
+ 671508 words of memory out of 5000000
+ 28220 multiletter control sequences out of 15000+600000
+ 27253 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,81p,3550b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,20n,81p,3564b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on dissertation.pdf (54 pages, 45318971 bytes).
+}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8
+.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on dissertation.pdf (138 pages, 147162991 bytes).
 PDF statistics:
- 1079 PDF objects out of 1200 (max. 8388607)
- 871 compressed objects within 9 object streams
- 210 named destinations out of 1000 (max. 500000)
- 22318 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 5687 PDF objects out of 6186 (max. 8388607)
+ 3719 compressed objects within 38 object streams
+ 539 named destinations out of 1000 (max. 500000)
+ 27250 words of extra memory for PDF output out of 29859 (max. 10000000)
 

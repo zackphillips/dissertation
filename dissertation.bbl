@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -20,7 +20,6 @@ R.~Hooke, \emph{Micrographia: or, Some physiological descriptions of minute
 \bibitem{Dowski:95}
 E.~R. Dowski and W.~T. Cathey, \enquote{Extended depth of field through
   wave-front coding,} Appl. Opt. \textbf{34}(11), 1859--1866 (1995).
-  \urlprefix\url{http://ao.osa.org/abstract.cfm?URI=ao-34-11-1859}.
 
 \bibitem{gustafsson2000surpassing}
 M.~G. Gustafsson, \enquote{Surpassing the lateral resolution limit by a factor
@@ -245,6 +244,315 @@ G.~Popescu, Y.~Park, N.~Lue, C.~Best-Popescu, L.~Deflores, R.~R. Dasari, M.~S.
   dynamics,} American Journal of Physiology-Cell Physiology \textbf{295}(2),
   C538--C544 (2008).
 
+\bibitem{platt2001history}
+B.~C. Platt and R.~Shack, \enquote{History and principles of Shack-Hartmann
+  wavefront sensing,} Journal of refractive surgery \textbf{17}(5), S573--S577
+  (2001).
+
+\bibitem{smithDIC}
+Smith, \enquote{Microscopic interferometry,} Research \textbf{8}, 385--395
+  (1955).
+
+\bibitem{zernike1955discovered}
+F.~Zernike, \enquote{How I discovered phase contrast,} Science
+  \textbf{121}(3141), 345 (1955).
+
+\bibitem{yun2010system}
+W.~Yun, M.~Feser, and B.~Hornberger, \enquote{System and method for
+  quantitative reconstruction of Zernike phase-contrast images,}  (2010). US
+  Patent 7,787,588.
+
+\bibitem{CuiYangTearney2011}
+X.~Cui, C.~Yang, and G.~Tearney, \enquote{Quantitative differential
+  interference contrast (DIC) microscopy and photography based on wavefront
+  sensors,}  (2011). US Patent 8,039,776,
+  \urlprefix\url{http://www.google.com/patents/US8039776}.
+
+\bibitem{Wang2011}
+Z.~Wang, L.~Millet, M.~Mir, H.~Ding, S.~Unarunotai, J.~Rogers, M.~U. Gillette,
+  and G.~Popescu, \enquote{Spatial light interference microscopy (SLIM),}
+  Optics Express \textbf{19}(2), 1016--1026 (2011).
+
+\bibitem{waller2010transport}
+L.~Waller, L.~Tian, and G.~Barbastathis, \enquote{Transport of intensity
+  phase-amplitude imaging with higher order intensity derivatives,} Optics
+  express \textbf{18}(12), 12,552--12,561 (2010).
+
+\bibitem{Petruccelli:12}
+J.~Petruccelli, L.~Tian, and G.~Barbastathis, \enquote{The transport of
+  intensity equation and partially coherent fields,} in \emph{Biomedical
+  Optics}, p. BSu3A.69 (Optical Society of America, 2012).
+  \urlprefix\url{http://www.opticsinfobase.org/abstract.cfm?URI=BIOMED-2012-BSu3A.69}.
+
+\bibitem{Jingshan14GPTIE}
+Z.~Jingshan, R.~A. Claus, J.~Dauwels, L.~Tian, and L.~Waller,
+  \enquote{Transport of Intensity phase imaging by intensity spectrum fitting
+  of exponentially spaced defocus planes,} Optics Express \textbf{22}(9),
+  10,661--10,674 (2014).
+
+\bibitem{JingsanSourceRecovery2016}
+Z.~Jingshan, L.~Tian, P.~Varma, and L.~Waller, \enquote{Nonlinear Optimization
+  Algorithm for Partially Coherent Phase Retrieval and Source Recovery,} IEEE
+  Trans. Comput. Imaging  (2016).
+
+\bibitem{Hamilton1984a}
+D.~Hamilton and C.~Sheppard, \enquote{Differential phase contrast in scanning
+  optical microscopy,} Journal of Microscopy \textbf{133}(1), 27--39 (1984).
+
+\bibitem{lee2015color}
+D.~Lee, S.~Ryu, U.~Kim, D.~Jung, and C.~Joo, \enquote{Color-coded LED
+  microscopy for multi-contrast and quantitative phase-gradient imaging,}
+  Biomedical optics express \textbf{6}(12), 4912--4922 (2015).
+
+\bibitem{johnson2009retrographic}
+M.~K. Johnson and E.~H. Adelson, \enquote{Retrographic sensing for the
+  measurement of surface texture and shape,} in \emph{Computer Vision and
+  Pattern Recognition, 2009. CVPR 2009. IEEE Conference on}, pp. 1070--1077
+  (IEEE, 2009).
+
+\bibitem{Claus2015}
+A.~N. R.~Claus, P.~Naulleau and L.~Waller, \enquote{Quantitative phase
+  retrieval with arbitrary pupil and illumination,} Opt. Express \textbf{23},
+  26,672--26,682 (2015).
+
+\bibitem{osher2005iterative}
+S.~Osher, M.~Burger, D.~Goldfarb, J.~Xu, and W.~Yin, \enquote{An iterative
+  regularization method for total variation-based image restoration,}
+  Multiscale Modeling \& Simulation \textbf{4}(2), 460--489 (2005).
+
+\bibitem{chen2018quantitative}
+M.~Chen, Z.~F. Phillips, and L.~Waller, \enquote{Quantitative differential
+  phase contrast (DPC) microscopy with computational aberration correction,}
+  Optics express \textbf{26}(25), 32,888--32,899 (2018).
+
+\bibitem{phillipstechnical}
+Z.~F. Phillips and M.~Chen, \enquote{Technical Report: Benchmark Technologies
+  Quantitative Phase Target,}  .
+
+\bibitem{gross:14}
+D.~Gross, \enquote{Recovering low-rank matrices from few coefficients in any
+  basis,} IEEE Trans. Inf. Theory \textbf{57}(3), 1548--1566 (2011).
+
+\bibitem{Ma:15}
+C.~Ma, Z.~Liu, L.~Tian, Q.~Dai, and L.~Waller, \enquote{Motion deblurring with
+  temporally coded illumination in an LED array microscope,} Opt. Lett.
+  \textbf{40}(10), 2281--2284 (2015).
+  \urlprefix\url{http://ol.osa.org/abstract.cfm?URI=ol-40-10-2281}.
+
+\bibitem{phillips2015multi}
+Z.~F. Phillips, M.~V. D'Ambrosio, L.~Tian, J.~J. Rulison, H.~S. Patel,
+  N.~Sadras, A.~V. Gande, N.~A. Switz, D.~A. Fletcher, and L.~Waller,
+  \enquote{Multi-contrast imaging and digital refocusing on a mobile microscope
+  with a domed led array,} PloS one \textbf{10}(5), e0124,938 (2015).
+
+\bibitem{JMI:JMI1027}
+E.~D. Barone-Nugent, A.~Barty, and K.~A. Nugent, \enquote{{Quantitative
+  phase-amplitude microscopy I: optical microscopy},} Journal of Microscopy
+  \textbf{206}(3), 194--203 (2002).
+
+\bibitem{HayesDSP}
+M.~H. Hayes, \emph{Statistical Digital Signal Processing and Modeling} (Wiley,
+  1996).
+
+\bibitem{standardphaseresolution2016}
+R.~Horstmeyer, R.~Heintzmann, G.~Popescu, L.~Waller, and C.~Yang,
+  \enquote{Standardizing the resolution claims for coherent microscopy,} Nature
+  Photon.  (2016).
+
+\bibitem{zernike1942phase}
+F.~Zernike, \enquote{Phase contrast, a new method for the microscopic
+  observation of transparent objects,} Physica \textbf{9}, 686--698 (1942).
+
+\bibitem{Phillips:17}
+Z.~Phillips, M.~CHEN, and L.~Waller, \enquote{Quantitative Differential Phase
+  Contrast Imaging with Pupil Recovery,} in \emph{Optics in the Life Sciences
+  Congress}, p. JTu5A.2 (Optical Society of America, 2017).
+
+\bibitem{silvester2000determinants}
+J.~R. Silvester, \enquote{Determinants of block matrices,} The Mathematical
+  Gazette \textbf{84}(501), 460--467 (2000).
+
+\bibitem{PhillipsChen17cDPC}
+Z.~Phillips, M.~Chen, and L.~Waller, \enquote{Single-shot quantitative phase
+  microscopy with color-multiplexed differential phase contrast (cDPC),} PloS
+  one \textbf{12}(2), e0171,228 (2017).
+
+\bibitem{Perlman1194}
+Z.~E. Perlman, M.~D. Slack, Y.~Feng, T.~J. Mitchison, L.~F. Wu, and S.~J.
+  Altschuler, \enquote{Multidimensional Drug Profiling By Automated
+  Microscopy,} Science \textbf{306}(5699), 1194--1198 (2004).
+  \eprint{http://science.sciencemag.org/content/306/5699/1194.full.pdf},
+  \urlprefix\url{http://science.sciencemag.org/content/306/5699/1194}.
+
+\bibitem{brodin2011high}
+P.~Brodin and T.~Christophe, \enquote{High-content screening in infectious
+  diseases,} Current opinion in chemical biology \textbf{15}(4), 534--539
+  (2011).
+
+\bibitem{bickle2010beautiful}
+M.~Bickle, \enquote{The beautiful cell: high-content screening in drug
+  discovery,} Analytical and bioanalytical chemistry \textbf{398}(1), 219--226
+  (2010).
+
+\bibitem{Liebel:03}
+U.~Liebel, V.~Starkuviene, H.~Erfle, J.~C. Simpson, A.~Poustka, S.~Wiemann, and
+  R.~Pepperkok, \enquote{A microscope-based screening platform for large-scale
+  functional protein analysis in intact cells,} FEBS Letters \textbf{554}(3),
+  394--398 (2003).
+
+\bibitem{huh2003global}
+W.-K. Huh, J.~V. Falvo, L.~C. Gerke, A.~S. Carroll, R.~W. Howson, J.~S.
+  Weissman, and E.~K. O'shea, \enquote{Global analysis of protein localization
+  in budding yeast,} Nature \textbf{425}(6959), 686 (2003).
+
+\bibitem{peiffer1979alcohol}
+J.~Peiffer, F.~Majewski, H.~Fischbach, J.~Bierich, and B.~Volk,
+  \enquote{Alcohol embryo-and fetopathy: Neuropathology of 3 children and 3
+  fetuses,} Journal of the Neurological Sciences \textbf{41}(2), 125--137
+  (1979).
+
+\bibitem{remmelinck2000could}
+M.~Remmelinck, M.~B.~S. Lopes, N.~Nagy, S.~Rorive, K.~Rombaut, C.~Decaestecker,
+  R.~Kiss, and I.~Salmon, \enquote{How could static telepathology improve
+  diagnosis in neuropathology?} Analytical Cellular Pathology \textbf{21}(3-4),
+  177--182 (2000).
+
+\bibitem{alegro2017automating}
+M.~Alegro, P.~Theofilas, A.~Nguy, P.~A. Castruita, W.~Seeley, H.~Heinsen, D.~M.
+  Ushizima, and L.~T. Grinberg, \enquote{Automating cell detection and
+  classification in human brain fluorescent microscopy images using dictionary
+  learning and sparse coding,} Journal of neuroscience methods \textbf{282},
+  20--33 (2017).
+
+\bibitem{Tian2014}
+L.~Tian, X.~Li, K.~Ramchandran, and L.~Waller, \enquote{Multiplexed coded
+  illumination for Fourier Ptychography with an LED array microscope,} Biomed.
+  Opt. Express \textbf{5}(7), 2376--2389 (2014).
+  \urlprefix\url{http://www.opticsinfobase.org/boe/abstract.cfm?URI=boe-5-7-2376}.
+
+\bibitem{zeissSlideScan}
+C.~Z. Microscopy, \enquote{Zeiss Axio Scan.Z1,}  (2019).
+  \urlprefix\url{https://www.zeiss.com/microscopy/us/products/imaging-systems/axio-scan-z1.html}.
+
+\bibitem{Carpenter2006}
+A.~E. Carpenter, T.~R. Jones, M.~R. Lamprecht, C.~Clarke, I.~H. Kang,
+  O.~Friman, D.~A. Guertin, J.~H. Chang, R.~A. Lindquist, J.~Moffat,
+  P.~Golland, and D.~M. Sabatini, \enquote{CellProfiler: image analysis
+  software for identifying and quantifying cell phenotypes,} Genome Biology
+  \textbf{7}(10), R100 (2006).
+  \urlprefix\url{https://doi.org/10.1186/gb-2006-7-10-r100}.
+
+\bibitem{Lohmann1996space}
+A.~W. Lohmann, R.~G. Dorsch, D.~Mendlovic, Z.~Zalevsky, and C.~Ferreira,
+  \enquote{Space--bandwidth product of optical signals and systems,} J. Opt.
+  Soc. Am. A \textbf{13}(3), 470--473 (1996).
+
+\bibitem{tian2015computational}
+L.~Tian, Z.~Liu, L.-H. Yeh, M.~Chen, J.~Zhong, and L.~Waller,
+  \enquote{Computational illumination for high-speed in vitro Fourier
+  ptychographic microscopy,} Optica \textbf{2}(10), 904--911 (2015).
+
+\bibitem{Grinberg2007}
+L.~T. Grinberg, R.~E. de~Lucena~Ferretti, J.~M. Farfel, R.~Leite, C.~A.
+  Pasqualucci, S.~Rosemberg, R.~Nitrini, P.~H.~N. Saldiva, W.~Jacob~Filho, and
+  {Brazilian Aging Brain Study Group}, \enquote{Brain bank of the Brazilian
+  aging brain study group---a milestone reached and more than 1,600 collected
+  brains,} Cell and Tissue Banking \textbf{8}(2), 151--162 (2007).
+  \urlprefix\url{https://doi.org/10.1007/s10561-006-9022-z}.
+
+\bibitem{rayleigh1896xv}
+L.~Rayleigh, \enquote{XV. On the theory of optical images, with special
+  reference to the microscope,} The London, Edinburgh, and Dublin Philosophical
+  Magazine and Journal of Science \textbf{42}(255), 167--195 (1896).
+
+\bibitem{BASTIAANS197826}
+M.~Bastiaans, \enquote{The Wigner distribution function applied to optical
+  signals and systems,} Optics Communications \textbf{25}(1), 26 -- 30 (1978).
+
+\bibitem{raskar2006coded}
+R.~Raskar, A.~Agrawal, and J.~Tumblin, \enquote{Coded exposure photography:
+  motion deblurring using fluttered shutter,} ACM Transactions on Graphics
+  (TOG) \textbf{25}(3), 795--804 (2006).
+
+\bibitem{nesterov}
+Y.~E. Nesterov, \enquote{A method for solving the convex programming problem
+  with convergence rate $O(1/k^2)$,} Dokl. Akad. Nauk SSSR \textbf{269},
+  543--547 (1983). \urlprefix\url{https://ci.nii.ac.jp/naid/10029946121/en/}.
+
+\bibitem{mitra:2014}
+K.~{Mitra}, O.~S. {Cossairt}, and A.~{Veeraraghavan}, \enquote{A Framework for
+  Analysis of Computational Imaging Systems: Role of Signal Prior, Sensor Noise
+  and Multiplexing,} IEEE Transactions on Pattern Analysis and Machine
+  Intelligence \textbf{36}(10), 1909--1921 (2014).
+
+\bibitem{hagiwara2000regularization}
+K.~Hagiwara and K.~Kuno, \enquote{Regularization learning and early stopping in
+  linear networks,} in \emph{Proceedings of the IEEE-INNS-ENNS International
+  Joint Conference on Neural Networks. IJCNN 2000. Neural Computing: New
+  Challenges and Perspectives for the New Millennium}, vol.~4, pp. 511--516
+  (IEEE, 2000).
+
+\bibitem{Yalamanchili2015}
+P.~Yalamanchili, U.~Arshad, Z.~Mohammed, P.~Garigipati, P.~Entschev,
+  B.~Kloppenborg, J.~Malcolm, and J.~Melonakos, \enquote{{ArrayFire - A high
+  performance software library for parallel computing with an easy-to-use
+  API},}  (2015).
+
+\bibitem{cossairt2013does}
+O.~Cossairt, M.~Gupta, and S.~K. Nayar, \enquote{When does computational
+  imaging improve performance?} IEEE transactions on image processing
+  \textbf{22}(2), 447--458 (2013).
+
+\bibitem{chan2011bounds}
+\emph{Bounds for the condition numbers of spatially-variant convolution
+  matrices in image restoration problems} (OSA, Toronto, 2011).
+
+\bibitem{illuminate}
+Website:, \enquote{https://github.com/zfphil/illuminate,} Github .
+
+\bibitem{micromanager}
+A.~Edelstein, N.~Amodaj, K.~Hoover, R.~Vale, and N.~Stuurman, \enquote{Computer
+  Control of Microscopes Using µManager,} Current Protocols in Molecular
+  Biology \textbf{92}(1), 14.20.1--14.20.17 (2010).
+
+\bibitem{Kluyver:2016aa}
+T.~Kluyver, B.~Ragan-Kelley, F.~P{\'e}rez, B.~Granger, M.~Bussonnier,
+  J.~Frederic, K.~Kelley, J.~Hamrick, J.~Grout, S.~Corlay, P.~Ivanov, D.~Avila,
+  S.~Abdalla, and C.~Willing, \enquote{Jupyter Notebooks -- a publishing format
+  for reproducible computational workflows,} in \emph{Positioning and Power in
+  Academic Publishing: Players, Agents and Agendas}, F.~Loizides and
+  B.~Schmidt, eds., pp. 87 -- 90 (IOS Press, 2016).
+
+\bibitem{nikonperfect}
+\enquote{{Nikon} Perfect Focus,}
+  \url{https://www.microscopyu.com/applications/live-cell-imaging/nikon-perfect-focus-system}.
+  Accessed: 2019-01-23.
+
+\bibitem{zeissdefinite}
+\enquote{{Zeiss} Definite Focus,}
+  \url{https://www.zeiss.com/microscopy/us/products/light-microscopes/axio-observer-for-biology/definite-focus.html}.
+  Accessed: 2019-01-23.
+
+\bibitem{illumpower}
+C.~S. Murphy and M.~W. Davidson, \enquote{Light Source Power Levels,}
+  \url{http://zeiss-campus.magnet.fsu.edu/articles/lightsources/powertable.html}
+  (2019). Accessed: 2019-02-13.
+
+\bibitem{autofluor}
+A.~C. Croce and G.~Bottiroli, \enquote{Autofluorescence spectroscopy and
+  imaging: a tool for biomedical research and diagnosis,} European journal of
+  histochemistry : EJH \textbf{58}(4), 2461; 2461--2461 (2014).
+  \urlprefix\url{https://www.ncbi.nlm.nih.gov/pubmed/25578980}.
+
+\bibitem{lippincott2003photobleaching}
+J.~Lippincott-Schwartz, N.~Altan-Bonnet, and G.~H. Patterson,
+  \enquote{Photobleaching and photoactivation: following protein dynamics in
+  living cells.} Nature cell biology pp. S7--14 (2003).
+
+\bibitem{fluorlifetime2010}
+M.~Y. Berezin and S.~Achilefu, \enquote{Fluorescence Lifetime Measurements and
+  Biological Imaging,} Chemical Reviews \textbf{110}(5), 2641--2684 (2010).
+
 \bibitem{kohler1893neues}
 A.~K{\"o}hler, \enquote{Ein neues Beleuchtungsverfahren f{\"u}r
   mikrophotographische Zwecke,} Zeitschrift f{\"u}r wissenschaftliche
@@ -258,14 +566,6 @@ W.~T. Anderson, \enquote{Xenon compact arc lamps,} JOSA \textbf{41}(6),
 \bibitem{edison1880electric}
 T.~A. Edison, \enquote{Electric lamp,}  (1880). US Patent 223,898.
 
-\bibitem{smithDIC}
-Smith, \enquote{Microscopic interferometry,} Research \textbf{8}, 385--395
-  (1955).
-
-\bibitem{zernike1942phase}
-F.~Zernike, \enquote{Phase contrast, a new method for the microscopic
-  observation of transparent objects,} Physica \textbf{9}, 686--698 (1942).
-
 \bibitem{schawlow1958infrared}
 A.~L. Schawlow and C.~H. Townes, \enquote{Infrared and optical masers,}
   Physical Review \textbf{112}(6), 1940 (1958).
@@ -275,29 +575,6 @@ V.~Poher, H.~Zhang, G.~Kennedy, C.~Griffin, S.~Oddos, E.~Gu, D.~Elson,
   J.~Girkin, P.~French, M.~Dawson, \emph{et~al.}, \enquote{Optical sectioning
   microscopes with no moving parts using a micro-stripe array light emitting
   diode,} Optics Express \textbf{15}(18), 11,196--11,206 (2007).
-
-\bibitem{phillips2015multi}
-Z.~F. Phillips, M.~V. D'Ambrosio, L.~Tian, J.~J. Rulison, H.~S. Patel,
-  N.~Sadras, A.~V. Gande, N.~A. Switz, D.~A. Fletcher, and L.~Waller,
-  \enquote{Multi-contrast imaging and digital refocusing on a mobile microscope
-  with a domed led array,} PloS one \textbf{10}(5), e0124,938 (2015).
-
-\bibitem{chen2018quantitative}
-M.~Chen, Z.~F. Phillips, and L.~Waller, \enquote{Quantitative differential
-  phase contrast (DPC) microscopy with computational aberration correction,}
-  Optics express \textbf{26}(25), 32,888--32,899 (2018).
-
-\bibitem{Tian2014}
-L.~Tian, X.~Li, K.~Ramchandran, and L.~Waller, \enquote{Multiplexed coded
-  illumination for Fourier Ptychography with an LED array microscope,} Biomed.
-  Opt. Express \textbf{5}(7), 2376--2389 (2014).
-  \urlprefix\url{http://www.opticsinfobase.org/boe/abstract.cfm?URI=boe-5-7-2376}.
-
-\bibitem{Ma:15}
-C.~Ma, Z.~Liu, L.~Tian, Q.~Dai, and L.~Waller, \enquote{Motion deblurring with
-  temporally coded illumination in an LED array microscope,} Opt. Lett.
-  \textbf{40}(10), 2281--2284 (2015).
-  \urlprefix\url{http://ol.osa.org/abstract.cfm?URI=ol-40-10-2281}.
 
 \bibitem{Dominguez:14}
 D.~Dominguez, L.~Molina, D.~B. Desai, T.~O'Loughlin, A.~A. Bernussi, and L.~G.
@@ -309,7 +586,6 @@ D.~Dominguez, L.~Molina, D.~B. Desai, T.~O'Loughlin, A.~A. Bernussi, and L.~G.
 K.~Guo, S.~Dong, P.~Nanda, and G.~Zheng, \enquote{Optimization of sampling
   pattern and the design of Fourier ptychographic illuminator,} Opt. Express
   \textbf{23}(5), 6171--6180 (2015).
-  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-23-5-6171}.
 
 \bibitem{brady2012multiscale}
 D.~Brady, M.~Gehm, R.~Stack, D.~Marks, D.~Kittle, D.~Golish, E.~Vera, and
@@ -326,19 +602,6 @@ D.~L. Marks, P.~Llull, Z.~Phillips, J.~Anderson, S.~Feller, E.~Vera, H.~Son,
 P.~Llull, L.~Bange, Z.~Phillips, K.~Davis, D.~L. Marks, and D.~J. Brady,
   \enquote{Characterization of the AWARE 40 wide-field-of-view visible imager,}
   Optica \textbf{2}(12), 1086--1089 (2015).
-
-\bibitem{illuminate}
-Website:, \enquote{https://github.com/zfphil/illuminate,} Github .
-
-\bibitem{PhillipsChen17cDPC}
-Z.~Phillips, M.~Chen, and L.~Waller, \enquote{Single-shot quantitative phase
-  microscopy with color-multiplexed differential phase contrast (cDPC),} PloS
-  one \textbf{12}(2), e0171,228 (2017).
-
-\bibitem{raskar2006coded}
-R.~Raskar, A.~Agrawal, and J.~Tumblin, \enquote{Coded exposure photography:
-  motion deblurring using fluttered shutter,} ACM Transactions on Graphics
-  (TOG) \textbf{25}(3), 795--804 (2006).
 
 \bibitem{Zhu2011}
 H.~Zhu, O.~Yaglidere, T.-W. Su, D.~Tseng, and A.~Ozcan, \enquote{Cost-effective
@@ -432,10 +695,6 @@ B.~Kachar, \enquote{Asymmetric illumination contrast: a method of image
   \eprint{http://www.sciencemag.org/content/286/5437/110.full.pdf},
   \urlprefix\url{http://www.sciencemag.org/content/286/5437/110.abstract}.
 
-\bibitem{Hamilton1984a}
-D.~Hamilton and C.~Sheppard, \enquote{Differential phase contrast in scanning
-  optical microscopy,} Journal of Microscopy \textbf{133}(1), 27--39 (1984).
-
 \bibitem{ford2012phase}
 T.~N. Ford, K.~K. Chu, and J.~Mertz, \enquote{Phase-gradient microscopy in
   thick tissue with oblique back-illumination,} Nature Methods \textbf{9}(12),
@@ -444,6 +703,312 @@ T.~N. Ford, K.~K. Chu, and J.~Mertz, \enquote{Phase-gradient microscopy in
 \bibitem{Kak:1988fk}
 A.~C. Kak and M.~Slaney, \emph{Principle of Computerized Tomographic Imaging}
   (Society for Industrial and Applied Mathematics, 2001).
+
+\bibitem{guizar2008phase}
+M.~Guizar-Sicairos and J.~R. Fienup, \enquote{Phase retrieval with transverse
+  translation diversity: a nonlinear optimization approach,} Optics Express
+  \textbf{16}(10), 7264--7278 (2008).
+
+\bibitem{maiden2009improved}
+A.~M. Maiden and J.~M. Rodenburg, \enquote{An improved ptychographical phase
+  retrieval algorithm for diffractive imaging,} Ultramicroscopy
+  \textbf{109}(10), 1256--1262 (2009).
+
+\bibitem{tripathi2014ptychographic}
+A.~Tripathi, I.~McNulty, and O.~G. Shpyrko, \enquote{Ptychographic overlap
+  constraint errors and the limits of their numerical recovery using conjugate
+  gradient descent methods,} Optics Express \textbf{22}(2), 1452--1466 (2014).
+
+\bibitem{Maiden2012}
+A.~M. Maiden, M.~J. Humphry, and J.~M. Rodenburg, \enquote{Ptychographic
+  transmission microscopy in three dimensions using a multi-slice approach,}
+  Journal of the Optical Society of America A: Optics, Image Science, and
+  Vision \textbf{29}(8), 1606--1614 (2012).
+  \urlprefix\url{http://josaa.osa.org/abstract.cfm?URI=josaa-29-8-1606}.
+
+\bibitem{jingshan2015partially}
+Z.~Jingshan, L.~Tian, J.~Dauwels, and L.~Waller, \enquote{Partially coherent
+  phase imaging with simultaneous source recovery,} Biomedical optics express
+  \textbf{6}(1), 257--265 (2015).
+
+\bibitem{zhong2016nonlinear}
+J.~Zhong, L.~Tian, P.~Varma, and L.~Waller, \enquote{Nonlinear optimization
+  algorithm for partially coherent phase retrieval and source recovery,} IEEE
+  Transactions on Computational Imaging \textbf{2}(3), 310--322 (2016).
+
+\bibitem{Bian:13}
+Z.~Bian, S.~Dong, and G.~Zheng, \enquote{Adaptive system correction for robust
+  {Fourier} ptychographic imaging,} Optics Express \textbf{21}(26),
+  32,400--32,410 (2013).
+  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-21-26-32400}.
+
+\bibitem{Yeh2015}
+L.-H. Yeh, J.~Dong, J.~Zhong, L.~Tian, M.~Chen, G.~Tang, M.~Soltanolkotabi, and
+  L.~Waller, \enquote{Experimental robustness of {Fourier} ptychography phase
+  retrieval algorithms,} Opt. Express \textbf{23}(26), 33,214--33,240 (2015).
+  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-23-26-33214}.
+
+\bibitem{Bian:16}
+L.~Bian, G.~Zheng, K.~Guo, J.~Suo, C.~Yang, F.~Chen, and Q.~Dai,
+  \enquote{Motion-corrected {Fourier} ptychography,} Biomed. Opt. Express
+  \textbf{7}(11), 4543--4553 (2016).
+  \urlprefix\url{http://www.osapublishing.org/boe/abstract.cfm?URI=boe-7-11-4543}.
+
+\bibitem{satat2017object}
+G.~Satat, M.~Tancik, O.~Gupta, B.~Heshmat, and R.~Raskar, \enquote{Object
+  classification through scattering media with deep learning on time resolved
+  measurement,} Optics express \textbf{25}(15), 17,466--17,479 (2017).
+
+\bibitem{zheng2013characterization}
+G.~Zheng, X.~Ou, R.~Horstmeyer, and C.~Yang, \enquote{Characterization of
+  spatially varying aberrations for wide field-of-view microscopy,} Optics
+  express \textbf{21}(13), 15,131--15,143 (2013).
+
+\bibitem{Horstmeyer:14}
+R.~Horstmeyer, X.~Ou, J.~Chung, G.~Zheng, and C.~Yang, \enquote{Overlapped
+  {Fourier} coding for optical aberration removal,} Opt. Express
+  \textbf{22}(20), 24,062--24,080 (2014).
+  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-22-20-24062}.
+
+\bibitem{Ou:14}
+X.~Ou, G.~Zheng, and C.~Yang, \enquote{Embedded pupil function recovery for
+  {Fourier} ptychographic microscopy,} Optics Express \textbf{22}(5),
+  4960--4972 (2014).
+  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-22-5-4960}.
+
+\bibitem{Chung:16fluor}
+J.~Chung, J.~Kim, X.~Ou, R.~Horstmeyer, and C.~Yang, \enquote{Wide
+  field-of-view fluorescence image deconvolution with aberration-estimation
+  from {Fourier} ptychography,} Biomed. Opt. Express \textbf{7}(2), 352--368
+  (2016).
+
+\bibitem{ou2015high}
+X.~Ou, R.~Horstmeyer, G.~Zheng, and C.~Yang, \enquote{High numerical aperture
+  Fourier ptychography: principle, implementation and characterization,} Optics
+  express \textbf{23}(3), 3472--3491 (2015).
+
+\bibitem{Holmes1992blind}
+T.~J. Holmes, \enquote{Blind deconvolution of quantum-limited incoherent
+  imagery: maximum-likelihood approach,} J. Opt. Soc. Am. A \textbf{9}(7),
+  1052--1061 (1992).
+
+\bibitem{sarder2006deconvolution}
+P.~Sarder and A.~Nehorai, \enquote{Deconvolution methods for 3-D fluorescence
+  microscopy images,} IEEE Signal Processing Magazine \textbf{23}(3), 32--45
+  (2006).
+
+\bibitem{ayers1988iterative}
+G.~Ayers and J.~C. Dainty, \enquote{Iterative blind deconvolution method and
+  its applications,} Optics letters \textbf{13}(7), 547--549 (1988).
+
+\bibitem{bell1995information}
+A.~J. Bell and T.~J. Sejnowski, \enquote{An information-maximization approach
+  to blind separation and blind deconvolution,} Neural computation
+  \textbf{7}(6), 1129--1159 (1995).
+
+\bibitem{chan1998total}
+T.~F. Chan and C.-K. Wong, \enquote{Total variation blind deconvolution,} IEEE
+  transactions on Image Processing \textbf{7}(3), 370--375 (1998).
+
+\bibitem{levin2006blind}
+A.~Levin, \enquote{Blind motion deblurring using image statistics,} in
+  \emph{Advances in Neural Information Processing Systems}, pp. 841--848
+  (2006).
+
+\bibitem{ZERNIKE1934689}
+von F.~Zernike, \enquote{Beugungstheorie des schneidenver-fahrens und seiner
+  verbesserten form, der phasenkontrastmethode,} Physica \textbf{1}(7), 689 --
+  704 (1934).
+
+\bibitem{chen20163d}
+M.~Chen, L.~Tian, and L.~Waller, \enquote{3D differential phase contrast
+  microscopy,} Biomedical optics express \textbf{7}(10), 3940--3950 (2016).
+
+\bibitem{Liu2014}
+Z.~Liu, L.~Tian, S.~Liu, and L.~Waller, \enquote{Real-time brightfield,
+  darkfield, and phase contrast imaging in a light-emitting diode array
+  microscope,} Journal of Biomedical Optics \textbf{19}(10), 5--19 (2014).
+  \urlprefix\url{http://dx.doi.org/10.1117/1.JBO.19.10.106002}.
+
+\bibitem{rodrigo2014rapid}
+J.~A. Rodrigo and T.~Alieva, \enquote{Rapid quantitative phase imaging for
+  partially coherent light microscopy,} Optics express \textbf{22}(11),
+  13,472--13,483 (2014).
+
+\bibitem{lu2016quantitative}
+H.~Lu, J.~Chung, X.~Ou, and C.~Yang, \enquote{Quantitative phase imaging and
+  complex field reconstruction by pupil modulation differential phase
+  contrast,} Optics express \textbf{24}(22), 25,345--25,361 (2016).
+
+\bibitem{LBFGS}
+D.~C. Liu and J.~Nocedal, \enquote{On the limited memory BFGS method for large
+  scale optimization,} Mathematical programming \textbf{45}(1-3), 503--528
+  (1989).
+
+\bibitem{Chung2016}
+J.~Chung, H.~Lu, X.~Ou, H.~Zhou, and C.~Yang, \enquote{Wide-field Fourier
+  ptychographic microscopy using laser illumination source,} Biomedical optics
+  express \textbf{7}(11), 4787--4802 (2016).
+
+\bibitem{Chen2016}
+M.~Chen, L.~Tian, and L.~Waller, \enquote{{3D} differential phase contrast
+  microscopy,} Biomedical Optics Express \textbf{7}, 3940 (2016).
+
+\bibitem{ou2013quantitative}
+X.~Ou, R.~Horstmeyer, C.~Yang, and G.~Zheng, \enquote{Quantitative phase
+  imaging via Fourier ptychographic microscopy,} Optics Letters
+  \textbf{38}(22), 4845--4848 (2013).
+
+\bibitem{Dong:14}
+S.~Dong, K.~Guo, P.~Nanda, R.~Shiradkar, and G.~Zheng, \enquote{FPscope: a
+  field-portable high-resolution microscope using a cellphone lens,} Biomed.
+  Opt. Express \textbf{5}(10), 3305--3310 (2014).
+  \urlprefix\url{http://www.opticsinfobase.org/boe/abstract.cfm?URI=boe-5-10-3305}.
+
+\bibitem{Thibault2009}
+P.~Thibault, M.~Dierolf, O.~Bunk, A.~Menzel, and F.~Pfeiffer, \enquote{Probe
+  retrieval in ptychographic coherent diffractive imaging,} Ultramicroscopy
+  \textbf{109}(4), 338--343 (2009).
+
+\bibitem{Sun:16LEDpos}
+J.~Sun, Q.~Chen, Y.~Zhang, and C.~Zuo, \enquote{Efficient positional
+  misalignment correction method for {Fourier} ptychographic microscopy,}
+  Biomed. Opt. Express \textbf{7}(4), 1336--1350 (2016).
+
+\bibitem{Liu:17}
+J.~Liu, Y.~Li, W.~Wang, H.~Zhang, Y.~Wang, J.~Tan, and C.~Liu, \enquote{Stable
+  and robust frequency domain position compensation strategy for {Fourier}
+  ptychographic microscopy,} Opt. Express \textbf{25}(23), 28,053--28,067
+  (2017).
+
+\bibitem{maiden2012annealing}
+A.~Maiden, M.~Humphry, M.~Sarahan, B.~Kraus, and J.~Rodenburg, \enquote{An
+  annealing algorithm to correct positioning errors in ptychography,}
+  Ultramicroscopy \textbf{120}, 64--72 (2012).
+
+\bibitem{zhang2013translation}
+F.~Zhang, I.~Peterson, J.~Vila-Comamala, A.~Diaz, F.~Berenguer, R.~Bean,
+  B.~Chen, A.~Menzel, I.~K. Robinson, and J.~M. Rodenburg, \enquote{Translation
+  position determination in ptychographic coherent diffraction imaging,} Optics
+  express \textbf{21}(11), 13,592--13,606 (2013).
+
+\bibitem{Dou2017}
+J.~Dou, Z.~Gao, J.~Ma, C.~Yuan, Z.~Yang, and L.~Wang, \enquote{Iterative
+  autofocusing strategy for axial distance error correction in ptychography,}
+  Optics and Lasers in Engineering \textbf{98}(Supplement C), 56 -- 61 (2017).
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0143816617301409}.
+
+\bibitem{Eckert:16}
+R.~Eckert, L.~Tian, and L.~Waller, \enquote{Algorithmic Self-calibration of
+  Illumination Angles in {Fourier} Ptychographic Microscopy,} in \emph{Imaging
+  and Applied Optics 2016}, p. CT2D.3 (Optical Society of America, 2016).
+
+\bibitem{Satat2016}
+G.~Satat, B.~Heshmat, D.~Raviv, and R.~Raskar, \enquote{All Photons Imaging
+  Through Volumetric Scattering,} Scientific Reports \textbf{6}, 33,946 (2016).
+
+\bibitem{Pan2017}
+A.~Pan, Y.~Zhang, T.~Zhao, Z.~Wang, D.~Dan, M.~Lei, and B.~Yao, \enquote{System
+  calibration method for {Fourier} ptychographic microscopy,} Journal of
+  Biomedical Optics \textbf{22}(9), 11 -- 22 (2017).
+  \urlprefix\url{http://dx.doi.org/10.1117/1.JBO.22.9.096005}.
+
+\bibitem{Turpin:1995}
+J.~L. Terry M.~Turpin, Leslie H.~Gesell and C.~H. Price, \enquote{Theory of the
+  synthetic aperture microscope,} vol. 2566, pp. 2566 -- 2566 (1995).
+  \urlprefix\url{http://dx.doi.org/10.1117/12.217378}.
+
+\bibitem{Di:08}
+J.~Di, J.~Zhao, H.~Jiang, P.~Zhang, Q.~Fan, and W.~Sun, \enquote{High
+  resolution digital holographic microscopy with a wide field of view based on
+  a synthetic aperture technique and use of linear CCD scanning,} Appl. Opt.
+  \textbf{47}(30), 5654--5659 (2008).
+
+\bibitem{Horstmeyer:16}
+R.~Horstmeyer, J.~Chung, X.~Ou, G.~Zheng, and C.~Yang, \enquote{Diffraction
+  tomography with {Fourier} ptychography,} Optica \textbf{3}(8), 827--835
+  (2016).
+
+\bibitem{Sun:16}
+J.~Sun, Q.~Chen, Y.~Zhang, and C.~Zuo, \enquote{Sampling criteria for {Fourier}
+  ptychographic microscopy in object space and frequency space,} Opt. Express
+  \textbf{24}(14), 15,765--15,781 (2016).
+
+\bibitem{Kuang:15}
+C.~Kuang, Y.~Ma, R.~Zhou, J.~Lee, G.~Barbastathis, R.~R. Dasari, Z.~Yaqoob, and
+  P.~T.~C. So, \enquote{Digital micromirror device-based laser-illumination
+  {Fourier} ptychographic microscopy,} Opt. Express \textbf{23}(21),
+  26,999--27,010 (2015).
+  \urlprefix\url{http://www.opticsexpress.org/abstract.cfm?URI=oe-23-21-26999}.
+
+\bibitem{Sen:16}
+S.~Sen, I.~Ahmed, B.~Aljubran, A.~A. Bernussi, and L.~G. de~Peralta,
+  \enquote{Fourier ptychographic microscopy using an infrared-emitting
+  hemispherical digital condenser,} Appl. Opt. \textbf{55}(23), 6421--6427
+  (2016).
+
+\bibitem{Hell:1993}
+S.~Hell, G.~Reiner, C.~Cremer, and E.~H. Stelzer, \enquote{Aberrations in
+  confocal fluorescence microscopy induced by mismatches in refractive index,}
+  Journal of microscopy \textbf{169}(3), 391--405 (1993).
+
+\bibitem{Kang:18}
+S.~Kang, P.~Kang, S.~Jeong, Y.~Kwon, T.~D. Yang, J.~H. Hong, M.~Kim, K.-D.
+  Song, J.~H. Park, J.~H. Lee, M.~J. Kim, K.~H. Kim, and W.~Choi,
+  \enquote{High-resolution adaptive optical imaging within thick scattering
+  media using closed-loop accumulation of single scattering,} Nature
+  Communications \textbf{8}(1), 2157 (2017).
+  \urlprefix\url{https://doi.org/10.1038/s41467-017-02117-8}.
+
+\bibitem{Shanker:16}
+A.~Shanker, A.~Wojdyla, G.~Gunjala, J.~Dong, M.~Benk, A.~Neureuther,
+  K.~Goldberg, and L.~Waller, \enquote{Off-axis Aberration Estimation in an
+  {EUV} Microscope Using Natural Speckle,} in \emph{Imaging and Applied Optics
+  2016}, p. ITh1F.2 (Optical Society of America, 2016).
+
+\bibitem{DAMMER1997214}
+C.~Dammer, P.~Leleux, D.~Villers, and M.~Dosire, \enquote{Use of the {Hough}
+  transform to determine the center of digitized {X-ray} diffraction patterns,}
+  Nuclear Instruments and Methods in Physics Research Section B: Beam
+  Interactions with Materials and Atoms \textbf{132}(1), 214 -- 220 (1997).
+
+\bibitem{CAUCHIE2008567}
+J.~Cauchie, V.~Fiolet, and D.~Villers, \enquote{Optimization of an {Hough}
+  transform algorithm for the search of a center,} Pattern Recognition
+  \textbf{41}(2), 567 -- 574 (2008).
+
+\bibitem{Yuen89}
+H.~K. Yuen, J.~Princen, J.~Illingworth, and J.~Kittler, \enquote{A comparative
+  study of {Hough} transform methods for circle finding,} in \emph{Proc. 5th
+  Alvey Vision Conf., Reading (31 Aug}, pp. 169--174 (1989).
+
+\bibitem{Davies:04}
+E.~Davies, \emph{Machine Vision: Theory, Algorithms and Practicalities}, 3rd
+  ed. (Morgan Kauffmann Publishers, 2004).
+
+\bibitem{BornWolf}
+M.~{Born} and E.~{Wolf}, \emph{{Principles of Optics: Electromagnetic Theory of
+  Propagation, Interference and Diffraction of Light}}, 7th ed. (Cambridge
+  University Press, 1999).
+
+\bibitem{Sun2017}
+J.~Sun, C.~Zuo, L.~Zhang, and Q.~Chen, \enquote{Resolution-enhanced {Fourier}
+  ptychographic microscopy based on high-numerical-aperture illuminations,} in
+  \emph{Scientific reports} (2017).
+
+\bibitem{falk2019unet}
+T.~Falk, D.~Mai, R.~Bensch, {\"O}.~{\c C}i{\c c}ek, A.~Abdulkadir,
+  Y.~Marrakchi, A.~B{\"o}hm, J.~Deubner, Z.~J{\"a}ckel, K.~Seiwald,
+  A.~Dovzhenko, O.~Tietz, C.~Dal~Bosco, S.~Walsh, D.~Saltukoglu, T.~L. Tay,
+  M.~Prinz, K.~Palme, M.~Simons, I.~Diester, T.~Brox, and O.~Ronneberger,
+  \enquote{U-Net: deep learning for cell counting, detection, and morphometry,}
+  Nature Methods \textbf{16}(1), 67--70 (2019).
+  \urlprefix\url{https://doi.org/10.1038/s41592-018-0261-2}.
+
+\bibitem{xue2017cell}
+Y.~Xue and N.~Ray, \enquote{Cell Detection in Microscopy Images with Deep
+  Convolutional Neural Network and Compressed Sensing,} arXiv preprint
+  arXiv:1708.03307  (2017).
 
 \bibitem{phillips2017quasi}
 Z.~Phillips, R.~Eckert, and L.~Waller, \enquote{Quasi-dome: A self-calibrated

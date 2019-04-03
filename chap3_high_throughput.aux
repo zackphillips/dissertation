@@ -1,0 +1,179 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{Perlman1194,brodin2011high,bickle2010beautiful}
+\citation{Liebel:03,huh2003global}
+\citation{peiffer1979alcohol,remmelinck2000could,alegro2017automating}
+\citation{Zheng2013,betzig2006imaging,Rust:06,gustafsson2000surpassing,rodenburg2004phase,Tian2014}
+\citation{zeissSlideScan}
+\citation{Carpenter2006}
+\citation{Lohmann1996space}
+\citation{gustafsson2000surpassing}
+\citation{Rust:06,betzig2006imaging}
+\citation{rodenburg2004phase}
+\citation{Zheng2013,tian2015computational,Tian2014}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {3}High-Throughput Imaging using Coded Illumination}{31}{chapter.3}\protected@file@percent }
+\newlabel{ch:highthroughput}{{\M@TitleReference {3}{High-Throughput Imaging using Coded Illumination}}{31}{High-Throughput Imaging using Coded Illumination}{chapter.3}{}}
+\citation{Grinberg2007}
+\citation{Tian2014}
+\citation{Lohmann1996space}
+\citation{gustafsson2000surpassing}
+\citation{Rust:06,betzig2006imaging}
+\citation{rodenburg2004phase}
+\citation{Zheng2013,tian2015computational,Tian2014}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Quantifying Throughput in Microscopy Systems}{32}{section.3.1}\protected@file@percent }
+\citation{rayleigh1896xv}
+\citation{BASTIAANS197826}
+\citation{Zheng2013}
+\newlabel{eq:highthtoughput_rayleigh}{{3.1}{33}{Quantifying Throughput in Microscopy Systems}{equation.3.1.1}{}}
+\citation{rodenburg2004phase}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces  Illustration of ideal space-bandwidth product allocation for various common objective lenses as plotted in the WDF. While the area of each rectangle remains constant, the aspect ratio illustrates the allocation of bandwidth between high-resolution and a wide FOV.}}{34}{figure.3.1}\protected@file@percent }
+\newlabel{fig:highthroughput_sbp}{{\M@TitleReference {3.1}{Quantifying Throughput in Microscopy Systems}}{34}{Illustration of ideal space-bandwidth product allocation for various common objective lenses as plotted in the WDF. While the area of each rectangle remains constant, the aspect ratio illustrates the allocation of bandwidth between high-resolution and a wide FOV}{figure.3.1}{}}
+\citation{raskar2006coded}
+\citation{agrawal2009optimal}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces  Comparison of spectral (Fourier-domain) and spatial (real-domain) scanning techniques in high-throughput systems in one dimension ($x$). The Wigner Distribution Function ($\mathbf  {W}(\bm  {x}, \bm  {k_x})$) provides a visual representation of the scanning geometry of each approach.}}{35}{figure.3.2}\protected@file@percent }
+\newlabel{fig:highthroughput_scanning}{{\M@TitleReference {3.2}{Quantifying Throughput in Microscopy Systems}}{35}{Comparison of spectral (Fourier-domain) and spatial (real-domain) scanning techniques in high-throughput systems in one dimension ($x$). The Wigner Distribution Function ($\mat {W}(\vec {x}, \vec {k_x})$) provides a visual representation of the scanning geometry of each approach}{figure.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}High-Throughput Microscopy with Motion Deblurring}{35}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces High throughput imaging system with coded illumination. A.) Our system consists of an inverted optical fluorescence microscope with a 2-axis motion stage, illuminated using a programmable LED illumination source. In our proposed method, the sample is illuminated with many discrete pulses while being scanned at constant velocity. B.) Comparison between conventional high-throughput imaging techniques (stop-and-stare, strobed illumination) and our proposed coded illumination technique. Coded illumination provides a trade-off between SNR and acquisition speed, particularly for low-light situations such as fluorescence imaging. C.) Image of our system, which is a Nikon TE300 microscope configured with a Prior motion stage and LED illuminator.}}{36}{figure.3.3}\protected@file@percent }
+\newlabel{fig:system}{{\M@TitleReference {3.3}{Quantifying Throughput in Microscopy Systems}}{36}{High throughput imaging system with coded illumination. A.) Our system consists of an inverted optical fluorescence microscope with a 2-axis motion stage, illuminated using a programmable LED illumination source. In our proposed method, the sample is illuminated with many discrete pulses while being scanned at constant velocity. B.) Comparison between conventional high-throughput imaging techniques (stop-and-stare, strobed illumination) and our proposed coded illumination technique. Coded illumination provides a trade-off between SNR and acquisition speed, particularly for low-light situations such as fluorescence imaging. C.) Image of our system, which is a Nikon TE300 microscope configured with a Prior motion stage and LED illuminator}{figure.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Multi-frame forward model. Here $[*]$ represents 2D convolution and $[\cdot ]$ represents the element-wise product. Top right inset is a an example of a full 1D multi-frame convolution matrix.}}{37}{figure.3.4}\protected@file@percent }
+\newlabel{fig:forward_model}{{\M@TitleReference {3.4}{High-Throughput Microscopy with Motion Deblurring}}{37}{Multi-frame forward model. Here $[*]$ represents 2D convolution and $[\cdot ]$ represents the element-wise product. Top right inset is a an example of a full 1D multi-frame convolution matrix}{figure.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{Methods}{37}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Motion Blur Forward Models}{37}{section*.17}\protected@file@percent }
+\newlabel{eq:single_forward}{{3.4}{37}{Motion Blur Forward Models}{equation.3.2.4}{}}
+\newlabel{eq:multiframe_forward}{{3.5}{37}{Motion Blur Forward Models}{equation.3.2.5}{}}
+\citation{nesterov}
+\citation{mitra:2014}
+\citation{hagiwara2000regularization}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces   A.) Optimal DNF values for illumination patterns generated by different optimization methods show that random search over binary patterns is of comparable effectiveness to the projected gradient descent method. B.) Example illumination sequences show differing power spectra between constant illumination and patterns generated by random search over greyscale, random search over binary, and projected gradient descent. C.) Optimized DNF (binary random search method) is plotted over different values of $\gamma $. A power law fit of $f(\gamma ) = 1.12 \gamma ^{0.641}$ has standard error of $1.075$.}}{38}{figure.3.5}\protected@file@percent }
+\newlabel{fig:illum_optimization}{{\M@TitleReference {3.5}{Motion Blur Forward Models}}{38}{A.) Optimal DNF values for illumination patterns generated by different optimization methods show that random search over binary patterns is of comparable effectiveness to the projected gradient descent method. B.) Example illumination sequences show differing power spectra between constant illumination and patterns generated by random search over greyscale, random search over binary, and projected gradient descent. C.) Optimized DNF (binary random search method) is plotted over different values of $\gamma $. A power law fit of $f(\gamma ) = 1.12 \gamma ^{0.641}$ has standard error of $1.075$}{figure.3.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Reconstruction Algorithm}{38}{section*.18}\protected@file@percent }
+\newlabel{sec:highthroughput:recon}{{\M@TitleReference {3.2}{Reconstruction Algorithm}}{38}{Reconstruction Algorithm}{section*.18}{}}
+\newlabel{eq:reconstruction}{{3.6}{38}{Reconstruction Algorithm}{equation.3.2.6}{}}
+\citation{Yalamanchili2015}
+\citation{raskar2006coded,Ma:15}
+\citation{agrawal2009optimal,cossairt2013does}
+\citation{agrawal2009optimal}
+\@writefile{toc}{\contentsline {subsubsection}{Reconstruction SNR}{39}{section*.19}\protected@file@percent }
+\newlabel{sec:highthroughput:methods_snr}{{\M@TitleReference {3.2}{Reconstruction SNR}}{39}{Reconstruction SNR}{section*.19}{}}
+\newlabel{eq:snr}{{3.7}{39}{Reconstruction SNR}{equation.3.2.7}{}}
+\citation{chan2011bounds}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces (1.18 gigapixel, 23mm $\times $ 20mm full-field reconstruction of 4.7$\mu m$ fluorescent microspheres. Inset scale bars are 50$\mu m$. While coded reconstructions have lower SNR than stop-and-stare (S\&S) measurements, measurements acquired using coded illumination (Coded) were more than 5.5$\times $ faster while maintaining enough signal to distinguish individual microspheres compared to strobed illumination (Strobed)}}{40}{figure.3.6}\protected@file@percent }
+\newlabel{eq:DNF}{{3.8}{40}{Reconstruction SNR}{equation.3.2.8}{}}
+\newlabel{eq:snr_coded}{{3.9}{40}{Reconstruction SNR}{equation.3.2.9}{}}
+\citation{raskar2006coded,agrawal2009optimal}
+\citation{raskar2006coded,agrawal2009optimal,Ma:15}
+\@writefile{toc}{\contentsline {subsubsection}{Illumination Optimization}{41}{section*.20}\protected@file@percent }
+\newlabel{sec:highthroughput:illum_opt}{{\M@TitleReference {3.2}{Illumination Optimization}}{41}{Illumination Optimization}{section*.20}{}}
+\newlabel{eq:illum_opt_single}{{3.10}{41}{Illumination Optimization}{equation.3.2.10}{}}
+\citation{agrawal2009optimal}
+\citation{Ma:15}
+\newlabel{eq:optimal_gamma}{{3.11}{42}{Illumination Optimization}{equation.3.2.11}{}}
+\citation{agrawal2009optimal}
+\citation{illuminate}
+\citation{micromanager}
+\citation{Kluyver:2016aa}
+\citation{nikonperfect,zeissdefinite}
+\@writefile{toc}{\contentsline {subsubsection}{System Hardware and Software}{43}{section*.21}\protected@file@percent }
+\newlabel{sec:highthroughput:hardware}{{\M@TitleReference {3.2}{System Hardware and Software}}{43}{System Hardware and Software}{section*.21}{}}
+\@writefile{toc}{\contentsline {subsection}{Results}{44}{section*.22}\protected@file@percent }
+\newlabel{sec:highthroughput:results}{{\M@TitleReference {3.2}{Results}}{44}{Results}{section*.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Gigapixel Reconstruction}{44}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Method Comparison}{44}{section*.24}\protected@file@percent }
+\newlabel{sec:highthroughput:method_comparison}{{\M@TitleReference {3.2}{Method Comparison}}{44}{Method Comparison}{section*.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces (Top) Experimental SNR values for a USAF 1951 resolution illuminated across a range of illumination values under strobed (square) and coded illumination (diamond). Solid lines illustrate predicted SNR based on known system parameters. Experimental SNR values are the average of 3 SNR measurements performed across the field. Green and orange data points represent inset data for fluorescent beads and resolution targets respectively. Characteristic illuminance values for LED sources, Halogen-Tungsten Lamps (Hal.), Mercury Lamps (Hg), Xenon Lamps (Xe), and Metal-Halide Lamps (M-H) are shown for reference. (Bottom) Selection of measurements used to generate the above plot. Scale bar is 25 $\mu m$.}}{45}{figure.3.7}\protected@file@percent }
+\newlabel{fig:experimental_comparison}{{\M@TitleReference {3.7}{Method Comparison}}{45}{(Top) Experimental SNR values for a USAF 1951 resolution illuminated across a range of illumination values under strobed (square) and coded illumination (diamond). Solid lines illustrate predicted SNR based on known system parameters. Experimental SNR values are the average of 3 SNR measurements performed across the field. Green and orange data points represent inset data for fluorescent beads and resolution targets respectively. Characteristic illuminance values for LED sources, Halogen-Tungsten Lamps (Hal.), Mercury Lamps (Hg), Xenon Lamps (Xe), and Metal-Halide Lamps (M-H) are shown for reference. (Bottom) Selection of measurements used to generate the above plot. Scale bar is 25 $\mu m$}{figure.3.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces  Limiting Analysis of Imaging System. A.) Analysis pipeline for predicting SNR from system parameters, including illumination power, mechanical parameters of the motion stage, and camera noise parameters. B.) The stop-and-stare acquisition strategy is only possible for some configurations of mechanical system parameters and frame rates. C.) Different combinations of optical system parameters and system illuminance determine the best possible SNR and whether strobed or coded illumination is preferable. Characteristic illuminance values for LED sources, Halogen-Tungsten Lamps (Hal), Mercury Lamps (Hg), Xenon Lamp (Xe), and Metal-Halide Lamps (M-H) are shown for reference. }}{46}{figure.3.8}\protected@file@percent }
+\newlabel{fig:component_analysis}{{\M@TitleReference {3.8}{Component Analysis}}{46}{Limiting Analysis of Imaging System. A.) Analysis pipeline for predicting SNR from system parameters, including illumination power, mechanical parameters of the motion stage, and camera noise parameters. B.) The stop-and-stare acquisition strategy is only possible for some configurations of mechanical system parameters and frame rates. C.) Different combinations of optical system parameters and system illuminance determine the best possible SNR and whether strobed or coded illumination is preferable. Characteristic illuminance values for LED sources, Halogen-Tungsten Lamps (Hal), Mercury Lamps (Hg), Xenon Lamp (Xe), and Metal-Halide Lamps (M-H) are shown for reference}{figure.3.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Component Analysis}{47}{section*.25}\protected@file@percent }
+\newlabel{sec:highthroughput:component_analysis}{{\M@TitleReference {3.2}{Component Analysis}}{47}{Component Analysis}{section*.25}{}}
+\newlabel{eq:photonflux}{{3.12}{47}{Component Analysis}{equation.3.2.12}{}}
+\newlabel{eq:illuminance_to_signal}{{3.13}{47}{Component Analysis}{equation.3.2.13}{}}
+\newlabel{eq:photonflux_snr}{{3.14}{47}{Component Analysis}{equation.3.2.14}{}}
+\newlabel{eq:sns_illum}{{3.15}{47}{Component Analysis}{equation.3.2.15}{}}
+\newlabel{eq:strobed_coded_illum}{{3.16}{47}{Component Analysis}{equation.3.2.16}{}}
+\citation{illumpower}
+\citation{autofluor}
+\citation{lippincott2003photobleaching}
+\@writefile{toc}{\contentsline {subsubsection}{Biological Limitations}{48}{section*.26}\protected@file@percent }
+\citation{fluorlifetime2010}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces  Limiting analysis of constraints imposed by the chemical fluorescence process, using contrast-to-noise ratio as the figure of merit. A.) Photobleaching influences the choice between coded and strobed illumination only when introducing a coding scheme would cause photobleaching, corresponding to a thin area of strobed optimality near the photobleaching limit. This plot assumes no background autofluorescence, so contrast-to-noise and SNR are equivalent. B.) The amount of autofluorescence relative to the signal mean has a slight effect on the optimality of strobed and coded illumination, but the effect is not strong relative to the other parameters studied here. Generally, the presence of autofluorescence degrades contrast-to-noise ratio significantly for all methods, for all illumination levels.}}{49}{figure.3.9}\protected@file@percent }
+\newlabel{fig:fluorescence_analysis}{{\M@TitleReference {3.9}{Biological Limitations}}{49}{Limiting analysis of constraints imposed by the chemical fluorescence process, using contrast-to-noise ratio as the figure of merit. A.) Photobleaching influences the choice between coded and strobed illumination only when introducing a coding scheme would cause photobleaching, corresponding to a thin area of strobed optimality near the photobleaching limit. This plot assumes no background autofluorescence, so contrast-to-noise and SNR are equivalent. B.) The amount of autofluorescence relative to the signal mean has a slight effect on the optimality of strobed and coded illumination, but the effect is not strong relative to the other parameters studied here. Generally, the presence of autofluorescence degrades contrast-to-noise ratio significantly for all methods, for all illumination levels}{figure.3.9}{}}
+\newlabel{eq:cnr}{{3.17}{49}{Biological Limitations}{equation.3.2.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Summary}{50}{section.3.3}\protected@file@percent }
+\@setckpt{chap3_high_throughput}{
+\setcounter{page}{51}
+\setcounter{equation}{17}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{1}
+\setcounter{mpfootnote}{0}
+\setcounter{@memmarkcntra}{-1}
+\setcounter{storedpagenumber}{1}
+\setcounter{book}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{@ppsavesec}{0}
+\setcounter{@ppsaveapp}{0}
+\setcounter{vslineno}{0}
+\setcounter{poemline}{0}
+\setcounter{modulo@vs}{0}
+\setcounter{memfvsline}{0}
+\setcounter{verse}{0}
+\setcounter{chrsinstr}{0}
+\setcounter{poem}{0}
+\setcounter{newflo@tctr}{4}
+\setcounter{@contsubnum}{0}
+\setcounter{maxsecnumdepth}{1}
+\setcounter{sidefootnote}{0}
+\setcounter{pagenote}{0}
+\setcounter{pagenoteshadow}{0}
+\setcounter{memfbvline}{0}
+\setcounter{bvlinectr}{0}
+\setcounter{cp@cntr}{0}
+\setcounter{ism@mctr}{0}
+\setcounter{xsm@mctr}{0}
+\setcounter{csm@mctr}{0}
+\setcounter{ksm@mctr}{0}
+\setcounter{xksm@mctr}{0}
+\setcounter{cksm@mctr}{0}
+\setcounter{msm@mctr}{0}
+\setcounter{xmsm@mctr}{0}
+\setcounter{cmsm@mctr}{0}
+\setcounter{bsm@mctr}{0}
+\setcounter{workm@mctr}{0}
+\setcounter{sheetsequence}{68}
+\setcounter{lastsheet}{138}
+\setcounter{lastpage}{121}
+\setcounter{figure}{9}
+\setcounter{lofdepth}{1}
+\setcounter{table}{0}
+\setcounter{lotdepth}{1}
+\setcounter{parentequation}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{2}
+\setcounter{memhycontfloat}{0}
+\setcounter{Hpagenote}{0}
+\setcounter{bookmark@seq@number}{18}
+\setcounter{linenumber}{1}
+\setcounter{LN@truepage}{67}
+\setcounter{float@type}{8}
+\setcounter{algorithm}{0}
+\setcounter{ALG@line}{0}
+\setcounter{ALG@rem}{0}
+\setcounter{ALG@nested}{0}
+\setcounter{ALG@Lnr}{2}
+\setcounter{ALG@blocknr}{10}
+\setcounter{ALG@storecount}{0}
+\setcounter{ALG@tmpcounter}{0}
+\setcounter{@todonotes@numberoftodonotes}{0}
+\setcounter{section@level}{1}
+}

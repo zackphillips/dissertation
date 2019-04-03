@@ -1,39 +1,5 @@
 \chapter{Appendix} \label{ch:appendix}
 
-\section{Open-Source Code} \label{sec:appendix:opensource}
-Most of the source code used for these methods is available publically through the following repositories. Each project is licensed under the BSD 3-clause license.
-
-\begin{center}
-    \begin{tabular}{ | p{25mm} | p{70mm} | p{70mm} |}
-    \hline
-    \textbf{Repository} & \textbf{Description} & \textbf{URL} \\
-    \hline
-    \centering \texttt{llops} & GPU-acceleration library with numpy-like syntax and interchangeable backends. Also supports auto-differentiation and latex rendering through operators submodule. & https://github.com/zfphil/llops \\
-    \hline
-
-    \centering \texttt{comptic} & Computational microscopy library for python, including common functions for simulating optical systems. Also included scripts for acquisition using micro-manager. & https://github.com/zfphil/comptic \\
-    \hline
-
-    \centering \texttt{pydpc} & Python implementation of DPC algorithm, including simulation, processing real data, and aberration recovery. Also included analysis tools for analyzing SNR in DPC systems.& https://github.com/zfphil/pydpc \\
-    \hline
-
-    \centering \texttt{pyfpm} & Python implementation of FPM algorithm, including simulation, processing real data, aberration recovery, and source recovery. & https://github.com/zfphil/pyfpm \\
-    \hline
-
-    \centering \texttt{pydeblur} & Python implémentation of motion deblur algorithm. Also includes system analysis tools for convolutional forward models. & https://github.com/zfphil/pydeblur\\
-    \hline
-
-    \centering \texttt{illuminate} & LED array firmware with standardized API & https://github.com/zfphil/pydeblur\\
-    \hline
-
-    % \centering \texttt{illuminate \n controller} & High-level interfaces for controlling LED arrays, including MATLAB, python, micro-manager, and GUI interfaces. & https://github.com/zfphil/illuminatecontroller\\
-    % \hline
-
-    \centering \texttt{compcs} & CAD files and Android application for Computational CellScope. & https://github.com/zfphil/compcs\\
-    \hline
-
-    \end{tabular}
-\end{center}
 
 \section{Quantitative Phase Imaging}\label{sec:appendix:phase}
 
@@ -58,28 +24,57 @@ Most of the source code used for these methods is available publically through t
     \end{tabular}
 \end{center}
 
-% aptf_green : 4666.4586 Lux
-% aptf_blue : 3499.8440 Lux
-% aptf_red : 2738.1699 Lux
-% vcc_white : 2236.8149 Lux
-% thorlabs_blue : 1156.9732 Lux
-
 \subsection{LED Illuminance Values for DPC Analysis}\label{sec:appendix:dpc_led_power}
 This section describes measured LED power values for a range of common LEDs. Each of these measurements was made at the sample plane using an optical power-meter (Thorlabs PM100D) at a distance of 50$mm$ from the LED.
 \begin{center}
-    \begin{tabular}{ | p{35mm} | p{20mm} | p{35mm} | p{70mm} |}
+    \begin{tabular}{ | p{32mm} | p{17mm} | p{32mm} | p{70mm} |}
     \hline
     \textbf{\centering LED Mfg. \newline Part Number} & \textbf{LED Type} & \textbf{Illuminance} & \textbf{Comment} \\
     \hline
-    \centering VCC\newline VAOL-3LWY4 & Through-hole & 1000.42 Lux & Used in Computational CellScope~\cite{phillips2015multi}\\
+    \centering{VCC / \newline VAOL-3LWY4} & \centering{Through-hole} & 1000.42 Lux & Used in Computational CellScope~\cite{phillips2015multi}\\
     \hline
-    \centering Knightbright\newline APTF1616SEEZ & SMD & (Red) 2738 Lux \newline (Green) 4666 Lux \newline (Blue) 3500 Lux & Used for Quasi-Dome~\cite{phillips2017quasi}\\
+    \centering{Knightbright / \newline APTF1616SEEZ} & \centering{SMD} & (Red) 2738 Lux \newline (Green) 4666 Lux \newline (Blue) 3500 Lux & Used for Quasi-Dome~\cite{phillips2017quasi}\\
     \hline
-    \centering VCC\newline VAOL-3LWY4 & Through-hole & 1000.42 Lux & Used for High-Throughput Fluorescence Imaging (Chapter~\ref{ch:highthroughput})\\
+    \centering{VCC / \newline VAOL-3LWY4} & \centering{Through-hole} & 1000.42 Lux & Used for High-Throughput Fluorescence Imaging (Chapter~\ref{ch:highthroughput})\\
     \hline
     \end{tabular}
 \end{center}
 
+\clearpage
+\section{Open-Source Code} \label{sec:appendix:opensource}
+Most of the source code used for these methods is available publically through the following repositories. Each project is licensed under the BSD 3-clause license.
+
+\begin{center}
+    \begin{tabular}{ | p{25mm} | p{65mm} | p{65mm} |}
+    \hline
+    \textbf{Repository} & \textbf{Description} & \textbf{URL} \\
+    \hline
+    \centering \texttt{llops} & GPU-acceleration library with numpy-like syntax and interchangeable backends. Also supports auto-differentiation and latex rendering through operators submodule. & \footnotesize{\url{https://github.com/zfphil/llops}} \\
+    \hline
+
+    \centering \texttt{comptic} & Computational microscopy library for python, including common functions for simulating optical systems. Also included scripts for acquisition using micro-manager. & \footnotesize{\url{https://github.com/zfphil/comptic}} \\
+    \hline
+
+    \centering \texttt{pydpc} & Python implementation of DPC algorithm, including simulation, processing real data, and aberration recovery. Also included analysis tools for analyzing SNR in DPC systems.& \footnotesize{\url{https://github.com/zfphil/pydpc}} \\
+    \hline
+
+    \centering \texttt{pyfpm} & Python implementation of FPM algorithm, including simulation, processing real data, aberration recovery, and source recovery. & \footnotesize{\url{https://github.com/zfphil/pyfpm}} \\
+    \hline
+
+    \centering \texttt{pydeblur} & Python implémentation of motion deblur algorithm. Also includes system analysis tools for convolutional forward models. & \footnotesize{\url{https://github.com/zfphil/pydeblur}}\\
+    \hline
+
+    \centering \texttt{illuminate} & LED array firmware with standardized API & \footnotesize{\url{https://github.com/zfphil/pydeblur}}\\
+    \hline
+
+    \centering \texttt{illuminate \newline controller} & High-level interfaces for controlling LED arrays, including MATLAB, python, micro-manager, and GUI interfaces. & \footnotesize{\url{https://github.com/zfphil/illuminatecontroller}} \\
+    \hline
+
+    \centering \texttt{compcs} & CAD files and Android application for Computational CellScope. & \footnotesize{\url{https://github.com/zfphil/compcs}}\\
+    \hline
+
+    \end{tabular}
+\end{center}
 
 \section{High-Throughput System Analysis}
 \label{sec:appendix:hightroughput}
