@@ -6,15 +6,17 @@
 
 \documentclass{ucbthesis}
 \usepackage{mathrsfs, graphicx, bm}
-\usepackage[backend=biber,style=ieee]{biblatex}    
-\addbibresource{references.bib}
-\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig, mathtools}
+% \usepackage[style=numeric]{biblatex}
+% \usepackage[backend=bibtex, style=ieee]{biblatex}
+\usepackage{cite}
 
-\bibliography{references}
+\usepackage{amsmath,amssymb,amsfonts,hyperref,lineno,microtype,setspace,multicol,textcomp, marvosym, algorithm,algpseudocode, algorithmicx, wrapfig, mathtools}
 
 % To-do notes
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 \newcommand{\mytodo}[2][1=]{\todo[linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{#2}}
+
+
 
 % Set graphics path
 \graphicspath{ {figures/} }
@@ -57,6 +59,9 @@
 
 \begin{document}
 
+
+\bibliographystyle{osajnl}
+
 % Declarations for Front Matter
 \title{Quantitative Microscopy using Coded Illumination}
 \author{Zachary F. Phillips}
@@ -87,11 +92,12 @@
 
 % Dedication
 \begin{dedication}
-\null\vfil
-\begin{center}
-\textit{For Mandie}
-\end{center}
-\vfil\null
+  todo
+% \null\vfil
+% \begin{center}
+% \textit{For Mandie}
+% \end{center}
+% \vfil\null
 \end{dedication}
 
 % You can delete the \clearpage lines if you don't want these to start on
@@ -105,15 +111,16 @@
 % \listoftables
 
 \begin{acknowledgements}
-First and foremost, I would like to thank Professor Laura Waller for providing careful guidance throughout my time at Berkeley, and for putting faith and resources behind myself and fellow lab members so that we can freely explore, create, and publish in the field of computational imaging. The Waller Lab has been a fantastic place to learn about the field of computational imaging, and I am grateful to each of my fellow group members who have individually made an impact on my career. I would like to specifically thank my co-authors and collaborators within the Waller lab, including Regina Eckert, Gautam Gunjala, Michael Kellman, Nick Antipa, and David Ren. I would also like to thank Michael Chen for being a close collaborator in both research and entrepreneurship, and my closest neighbor, Li-Hao Yeh, with whom I have enjoyed many conversations during our nearly 5 years in 558 Cory Hall. I have genuinely enjoyed my many whiteboard discussions with Sarah Dean, and feel very fortunate to have worked with Post-docs Lei Tian, Volker Jaedicke, Shwetadwip Chowdhury, and Emrah Bostan.
-
-During my time at Berkeley, I found that being productive and focused during the week requires taking time to unwind during the weekends (and, occasionally, during the evenings). I would first like to thank my girlfriend, Chelsea, for always being a steadfast adventure partner and sounding board through the many seasons of graduate school. Since my first days in Berkeley, I have shared many waves (and snapped many surfboards) with my close friend and fellow AS\&T student Brandon Wood. I also want to thank my close friends Alex Forse, Chris Lalau-Kearley, JB Chapman, Mike Chapman, Jon Morris, Alix Charles, Mike Francis, Mika Endo, Dan Wooten, and many others for being partners in exploring the beautiful state of California.
-
-Attending Berkeley has been my proudest and must fulfilling accomplishment, and it would have never been possible without my Mom, Dad, and sisters Allie and Mandie, who have always been supporting throughout many of our shared challenges as well as my own. I credit my dad, together with my grandfather, for teaching me how to break down a complicated problem into a series of small problems, and the importance of tenacity. My mother taught me the importance of a sense of humor, and how to play cards (but not shuffle). I would also like to acknowledge all of my grandparents, especially Phil and Bertha Phillips, who continue to teach importance of family and spending time in the outdoors.
-
-I also want to thank those who helped and encouraged me prior to coming to Berkeley, including Prof. Amy Oldenburg and her husband, Dan Marks, as well as Raghav Chhetri for being a wonderful mentor during my time at UNC-Chapel Hill.
-
-Finally, I want to thank the many undergraduate students I have been fortunate to work with, including Patrick Oare, Joel Whang, Nitin Sadras, Aditya Gande, Gautam Gunjala, Sachin Deyoung, Taehyung Kim, Paroma Varma, Jared Rulison, Sudarshan Seshadri, and Kuan Chang for their generous assistance with a variety of projects despite their many obligations.
+  todo
+% First and foremost, I would like to thank Professor Laura Waller for providing careful guidance throughout my time at Berkeley, and for putting faith and resources behind myself and fellow lab members so that we can freely explore, create, and publish in the field of computational imaging. The Waller Lab has been a fantastic place to learn about the field of computational imaging, and I am grateful to each of my fellow group members who have individually made an impact on my career. I would like to specifically thank my co-authors and collaborators within the Waller lab, including Regina Eckert, Gautam Gunjala, Michael Kellman, Nick Antipa, and David Ren. I would also like to thank Michael Chen for being a close collaborator in both research and entrepreneurship, and my closest neighbor, Li-Hao Yeh, with whom I have enjoyed many conversations during our nearly 5 years in 558 Cory Hall. I have genuinely enjoyed my many whiteboard discussions with Sarah Dean, and feel very fortunate to have worked with Post-docs Lei Tian, Volker Jaedicke, Shwetadwip Chowdhury, and Emrah Bostan.
+%
+% During my time at Berkeley, I found that being productive and focused during the week requires taking time to unwind during the weekends (and, occasionally, during the evenings). I would first like to thank my girlfriend, Chelsea, for always being a steadfast adventure partner and sounding board through the many seasons of graduate school. Since my first days in Berkeley, I have shared many waves (and snapped many surfboards) with my close friend and fellow AS\&T student Brandon Wood. I also want to thank my close friends Alex Forse, Chris Lalau-Kearley, JB Chapman, Mike Chapman, Jon Morris, Alix Charles, Mike Francis, Mika Endo, Dan Wooten, and many others.
+%
+% Attending Berkeley has been my proudest and must fulfilling accomplishment, and it would have never been possible without my Mom, Dad, and sisters Allie and Mandie, who have always been supporting throughout many of our shared challenges as well as my own. I credit my dad, together with my grandfather, for teaching me how to break down a complicated problem into a series of small problems, and the importance of tenacity. My mother taught me the importance of a sense of humor, and how to play cards (but not shuffle). I would also like to acknowledge all of my grandparents, especially Phil and Bertha Phillips, who continue to teach importance of family and spending time in the outdoors.
+%
+% I also want to thank those who helped and encouraged me prior to coming to Berkeley, including Prof. Amy Oldenburg and her husband, Dan Marks, as well as Raghav Chhetri for being a wonderful mentor during my time at UNC-Chapel Hill.
+%
+% Finally, I want to thank the many undergraduate students I have been fortunate to work with, including Patrick Oare, Joel Whang, Nitin Sadras, Aditya Gande, Gautam Gunjala, Sachin Deyoung, Taehyung Kim, Paroma Varma, Jared Rulison, Sudarshan Seshadri, and Kuan Chang for their generous assistance with a variety of projects despite their many obligations.
 
 \end{acknowledgements}
 
@@ -121,13 +128,14 @@ Finally, I want to thank the many undergraduate students I have been fortunate t
 
 \pagestyle{headings}
 \include{chap1_introduction}
-\include{chap2_phase}
-\include{chap3_high_throughput}
+% \include{chap2_phase}
+% \include{chap3_high_throughput}
 \include{chap4_fabrication}
-\include{chap5_self_calibration}
-\include{chap6_conclusion}
+% \include{chap5_self_calibration}
+% \include{chap6_conclusion}
 \include{appendix}
 
-\printbibliography
+\bibstyle{osajnl}
+\bibliography{references}
 
 \end{document}
