@@ -42,14 +42,14 @@ This section describes measured LED power values for a range of common LEDs. Eac
 
 \clearpage
 \section{Open-Source Code} \label{sec:appendix:opensource}
-Most of the source code used for these methods is available publically through the following repositories. Each project is licensed under the BSD 3-clause license.
+Most of the source code used for these methods is available publicly through the following repositories. Each project is licensed under the BSD 3-clause license.
 
 \begin{center}
     \begin{tabular}{ | p{25mm} | p{65mm} | p{65mm} |}
     \hline
     \textbf{Repository} & \textbf{Description} & \textbf{URL} \\
     \hline
-    \centering \texttt{llops} & GPU-acceleration library with numpy-like syntax and interchangeable backends. Also supports auto-differentiation and latex rendering through operators submodule. & \footnotesize{\url{https://github.com/zfphil/llops}} \\
+    \centering \texttt{llops} & GPU-acceleration library with numpy-like syntax and interchangeable backends. Also supports auto-differentiation and latex rendering through the operators submodule. & \footnotesize{\url{https://github.com/zfphil/llops}} \\
     \hline
 
     \centering \texttt{comptic} & Computational microscopy library for python, including common functions for simulating optical systems. Also included scripts for acquisition using micro-manager. & \footnotesize{\url{https://github.com/zfphil/comptic}} \\
@@ -61,7 +61,7 @@ Most of the source code used for these methods is available publically through t
     \centering \texttt{pyfpm} & Python implementation of FPM algorithm, including simulation, processing real data, aberration recovery, and source recovery. & \footnotesize{\url{https://github.com/zfphil/pyfpm}} \\
     \hline
 
-    \centering \texttt{pydeblur} & Python implémentation of motion deblur algorithm. Also includes system analysis tools for convolutional forward models. & \footnotesize{\url{https://github.com/zfphil/pydeblur}}\\
+    \centering \texttt{pydeblur} & Python implementation of motion deblur algorithm. Also includes system analysis tools for convolutional forward models. & \footnotesize{\url{https://github.com/zfphil/pydeblur}}\\
     \hline
 
     \centering \texttt{illuminate} & LED array firmware with standardized API & \footnotesize{\url{https://github.com/zfphil/pydeblur}}\\
@@ -131,7 +131,7 @@ Before we proceed further, note that for any matrices $\M$ and $\D$ with non-neg
 % \begin{align*}
 % \kappa(A) &= \kappa({W} B) \\&\leq \kappa({W}) \cdot \kappa(B) = \frac{\max_{j}c_j}{\min_{j}c_j} \cdot \frac{\max_i |\tilde h|_i}{\min_i |\tilde h|_i}\:.
 % \end{align*}
-% Since the condition number is an upper bound on the DNF, this provides a lower bound on SNR for this multiframe case.
+% Since the condition number is an upper bound on the DNF, this provides a lower bound on SNR for this multi-frame case.
 We can therefore conclude that
 \begin{align*}
     \mathrm{Tr}(\A^\dagger (\A^\dagger)^\top)&\leq \max_{i}\frac{1}{c_i}\cdot \mathrm{Tr}(\B^{-2})
@@ -176,7 +176,7 @@ The projection step is defined as
 \begin{align*}
     \h^{k+1} = \Pi_{\mathcal{S}}(\tilde \h_{k+1})\:,
 \end{align*}
-where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficent methods for this projection exist~\cite{gupta2010l1}.
+where $\mathcal{S}$ is the intersection of the box constraint $\{0\leq h_i\leq 1\}$ and the simplex constraint $\{\sum_i h_i = \gamma\}$. Efficient methods for this projection exist~\cite{gupta2010l1}.
 
 \subsection{Fundamental DNF Limits}\label{sec:appendix:dnf_limit}
 
