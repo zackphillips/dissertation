@@ -2,7 +2,7 @@
 
 My PhD dissertation from the Waller Lab at UC Berkeley: *Quantitative Microscopy using Coded Illumination* (2019).
 
-CI builds the PDF on every push to `master` and publishes it to:
+CI builds the PDF on every push to `main` and publishes it to:
 
 - https://zackphillips.com/dissertation/dissertation.pdf (GitHub Pages, opens inline)
 - the [`latest` release](https://github.com/zackphillips/dissertation/releases/tag/latest) (download)
