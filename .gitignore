@@ -260,3 +260,8 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+.DS_Store
+
+# Built by CI and published as a release asset
+dissertation.pdf
